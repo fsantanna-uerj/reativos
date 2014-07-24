@@ -72,7 +72,7 @@ Aulas
 -----
 
 <table border="1" cellspacing="0" cellpadding="20">
-<tr><th>1</th><td>
+<tr><th>1</th><th>15-08</th><td>
 <ul>
     <li> Apresentação do Curso.
     <li> O que é um sistema reativo?
@@ -83,7 +83,7 @@ Aulas
     Artigos.
 -->
 </td></tr>
-<tr><th>2</th><td>
+<tr><th>2</th><th>22-08</th><td>
 <ul>
     <li> Modelos de Concorrência
     <li> Concorrência e Paralelismo
@@ -101,25 +101,25 @@ Aulas
         hierárquica.
 -->
 </td></tr>
-<tr><th>3</th><td>
+<tr><th>3</th><th>29-08</th><td>
 <ul>
     <li> Máquinas de estado / Hierárquicas
     <li> Arduino (C, Céu)
 </ul>
 </td></tr>
-<tr><th>4</th><td></td></tr>
-<tr><th>5</th><td></td></tr>
-<tr><th>6</th><td></td></tr>
-<tr><th>7</th><td></td></tr>
-<tr><th>8</th><td></td></tr>
-<tr><th>9</th><td></td></tr>
-<tr><th>10</th><td></td></tr>
-<tr><th>11</th><td></td></tr>
-<tr><th>12</th><td></td></tr>
-<tr><th>13</th><td></td></tr>
-<tr><th>14</th><td></td></tr>
-<tr><th>15</th><td></td></tr>
-<tr><th>16</th><td></td></tr>
-<tr><th>17</th><td></td></tr>
-<tr><th>18</th><td></td></tr>
+<tr><th>4</th><th>05-09</th><td></td></tr>
+<tr><th>5</th><th>12-09</th><td></td></tr>
+<tr><th>6</th><th>19-09#</th><td></td></tr>
+<tr><th>7</th><th>26-09#</th><td></td></tr>
+<tr><th>8</th><th>03-10#</th><td></td></tr>
+<tr><th>9</th><th>10-10#</th><td></td></tr>
+<tr><th>10</th><th>17-10#</th><td></td></tr>
+<tr><th>11</th><th>24-10#</th><td></td></tr>
+<tr><th>12</th><th>31-10</th><td></td></tr>
+<tr><th>13</th><th>07-11</th><td></td></tr>
+<tr><th>14</th><th>14-11</th><td></td></tr>
+<tr><th>15</th><th>21-11</th><td></td></tr>
+<tr><th>16</th><th>28-11</th><td></td></tr>
+<tr><th>17</th><th>05-12</th><td></td></tr>
+<tr><th>18</th><th>12-12</th><td></td></tr>
 </table>
