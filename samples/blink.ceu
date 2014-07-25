@@ -1,0 +1,49 @@
+par/or do
+    loop do
+        par/or do
+            every 1s do
+                _toggle(1);
+            end
+        with
+            every 2s do
+                _toggle(2);
+            end
+        with
+            await BUTTON;
+            await 200ms;
+        end
+    end
+with
+    loop do
+        await BUTTON;
+        par/or do
+            await 200ms;
+        with
+            await BUTTON;
+            break;
+        end
+    end
+end
+
+var int dt = 1000;
+par do
+    every (dt)ms do
+        _toggle(1);
+    end
+with
+    loop do
+        await BUTTON;
+        await 200ms;
+        dt = dt - 100;
+    end
+with
+    loop do
+        await BUTTON;
+        par/or do
+            await 200ms;
+        with
+            await BUTTON;
+            break;
+        end
+    end
+end
