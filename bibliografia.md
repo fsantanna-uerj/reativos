@@ -7,11 +7,16 @@ Bibliografia
 Documentos
 ----------
 
-* [1985] *On the development of reactive systems*:
+<!--
+* [1978] *CAR Hoare - "Communicating sequential processes"*:
+    <http://www.cs.ucf.edu/courses/cop4020/sum2009/CSP-hoare.pdf>
+-->
+
+* [1985] *David Harel - "On the development of reactive systems"*:
     <http://www.wisdom.weizmann.ac.il/~dharel/SCANNED.PAPERS/ReactiveSystems.pdf>
     (Somente páginas 1-4, até antes de "What is the Problem?")
 
-* [1989] *Real time programming: Special purpose or general purpose languages*:
+* [1989] *Gérard Berry - "Real time programming: Special purpose or general purpose languages*":
     <http://hal.archives-ouvertes.fr/docs/00/07/54/94/PDF/RR-1065.pdf>
 
 * [1997] *Functional reactive animation*:
@@ -20,5 +25,8 @@ Documentos
 Vídeos
 ------
 
-* [2013] *Elm*:
+* [2013] *Rob Pike - "Concurrency Is Not Parallelism"*:
+    <http://vimeo.com/49718712>
+
+* [2013] *Evan Czaplicki - "Functional Reactive Programming in Elm"*:
     <http://www.infoq.com/presentations/elm-reactive-programming>
