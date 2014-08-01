@@ -22,6 +22,12 @@ Documentos
 * [1997] *Functional reactive animation*:
     <https://www.eecs.northwestern.edu/~robby/courses/395-495-2009-winter/fran.pdf>
 
+* [2014] *Bob Nystrom - Game Loop (Game Programming Patterns)*:
+    <http://gameprogrammingpatterns.com/game-loop.html>
+
+* [-] *Wikipedia - Embarrassingly parallel*:
+    <http://en.wikipedia.org/wiki/Embarrassingly_parallel>
+
 Vídeos
 ------
 
