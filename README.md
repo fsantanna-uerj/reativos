@@ -74,8 +74,10 @@ Aulas
 <table border="1" cellspacing="0" cellpadding="20">
 <tr><th>1</th><th>15-08</th><td>
 <ul>
-    <li> Apresentação do Curso.
-    <li> O que é um sistema reativo?
+    <li> Apresentação do Curso
+    <li> Sistemas reativos
+    <li> Arduino
+    <li> Tarefa-1, Tarefa-2, Artigos&Videos-1
 </ul>
 <!--
     Avaliação.
@@ -87,9 +89,11 @@ Aulas
 <ul>
     <li> Modelos de Concorrência
     <li> Concorrência e Paralelismo
-    <li> Padrão Observer
+    <li> Modelo Assíncrono
+    <li> Modelo Síncrono
 </ul>
 <!--
+    <li> Padrão Observer
     Exemplo do Blink.
     Esquemas de implementação do modelo síncrono.
     Padrão observer (similaridades com a impl. sinc.)
