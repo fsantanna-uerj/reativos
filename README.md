@@ -91,6 +91,7 @@ Aulas
     <li> Concorrência e Paralelismo
     <li> Modelo Assíncrono
     <li> Modelo Síncrono
+    <li> Arduino Chibi-OS, Occam-PI, Céu
 </ul>
 <!--
     <li> Padrão Observer
@@ -106,24 +107,27 @@ Aulas
 -->
 </td></tr>
 <tr><th>3</th><th>29-08</th><td>
+    <br/>
+<!--
 <ul>
     <li> Máquinas de estado / Hierárquicas
     <li> Arduino (C, Céu)
 </ul>
+-->
 </td></tr>
-<tr><th>4</th><th>05-09</th><td></td></tr>
-<tr><th>5</th><th>12-09</th><td></td></tr>
-<tr><th>6</th><th>19-09#</th><td></td></tr>
-<tr><th>7</th><th>26-09#</th><td></td></tr>
-<tr><th>8</th><th>03-10#</th><td></td></tr>
-<tr><th>9</th><th>10-10#</th><td></td></tr>
-<tr><th>10</th><th>17-10#</th><td></td></tr>
-<tr><th>11</th><th>24-10#</th><td></td></tr>
-<tr><th>12</th><th>31-10</th><td></td></tr>
-<tr><th>13</th><th>07-11</th><td></td></tr>
-<tr><th>14</th><th>14-11</th><td></td></tr>
-<tr><th>15</th><th>21-11</th><td></td></tr>
-<tr><th>16</th><th>28-11</th><td></td></tr>
-<tr><th>17</th><th>05-12</th><td></td></tr>
-<tr><th>18</th><th>12-12</th><td></td></tr>
+<tr><th>4</th><th>05-09</th><td><br/></td></tr>
+<tr><th>5</th><th>12-09</th><td><br/></td></tr>
+<tr><th>6</th><th>19-09#</th><td><br/></td></tr>
+<tr><th>7</th><th>26-09#</th><td><br/></td></tr>
+<tr><th>8</th><th>03-10#</th><td><br/></td></tr>
+<tr><th>9</th><th>10-10#</th><td><br/></td></tr>
+<tr><th>10</th><th>17-10#</th><td><br/></td></tr>
+<tr><th>11</th><th>24-10#</th><td><br/></td></tr>
+<tr><th>12</th><th>31-10</th><td><br/></td></tr>
+<tr><th>13</th><th>07-11</th><td><br/></td></tr>
+<tr><th>14</th><th>14-11</th><td><br/></td></tr>
+<tr><th>15</th><th>21-11</th><td><br/></td></tr>
+<tr><th>16</th><th>28-11</th><td><br/></td></tr>
+<tr><th>17</th><th>05-12</th><td><br/></td></tr>
+<tr><th>18</th><th>12-12</th><td><br/></td></tr>
 </table>
