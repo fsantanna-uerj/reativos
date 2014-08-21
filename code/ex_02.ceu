@@ -13,7 +13,9 @@ with
     loop do
         await PIN02;
         await 200ms;
-        dt = dt - 100;
+        if dt > 200 then
+            dt = dt - 100;
+        end
     end
 with
     loop do
