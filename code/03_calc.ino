@@ -1,19 +1,20 @@
-#define LED 13
-
 #include "xtea.c"
+
+#define LED 13
 
 void setup () {
     pinMode(LED, OUTPUT);
     Serial.begin(9600);
 }
  
-int led = 0;
-
 uint32_t key[] = { 1, 2, 3, 4 };
 uint32_t v[]   = { 10, 20 };
 
 void loop () {
-    digitalWrite(LED, led=!led);
+    {
+        static int led = 0;
+        digitalWrite(LED, led=!led);
+    }
 
     unsigned long t1 = millis();
 
