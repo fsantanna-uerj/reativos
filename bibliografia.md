@@ -35,13 +35,14 @@ Documentos
     <http://en.wikipedia.org/wiki/Embarrassingly_parallel>
 
 * [-] Terminação de Threads:
-    *Java - "Why Are Thread.stop, Thread.suspend, Thread.resume and Runtime.runFinalizersOnExit Deprecated?"*
+
+  * *Java - "Why Are Thread.stop, Thread.suspend, Thread.resume and Runtime.runFinalizersOnExit Deprecated?"*
 
     <http://docs.oracle.com/javase/6/docs/technotes/guides/concurrency/threadPrimitiveDeprecation.html>
 
-    *pthreads – man pthreads_cancel*
+  * *pthreads – man pthreads_cancel*
 
-    *ChibiOS - "How to cleanly stop the OS"*
+  * *ChibiOS - "How to cleanly stop the OS"*
 
     <http://www.chibios.org/dokuwiki/doku.php?id=chibios:howtos:stop_os>
 
