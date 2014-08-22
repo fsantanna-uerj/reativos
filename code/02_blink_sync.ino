@@ -21,7 +21,7 @@ void loop () {
 
     t1 -= dt;
     if (t1 <= 0) {
-        t1 = 1000;
+        t1 = 600;
         s1 = !s1;
         digitalWrite(LED1, s1);
     }
