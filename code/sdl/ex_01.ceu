@@ -1,0 +1,109 @@
+#include "sdl.ceu"
+
+input void SDL_REDRAW;
+input void SDL_QUIT;
+input _SDL_MouseButtonEvent* SDL_MOUSEBUTTONDOWN;
+
+var int win_w;
+var int win_h;
+var _SDL_Window* win;
+    finalize
+        win = _SDL_CreateWindow("Example 1",
+                            0, 0, 640, 480, _SDL_WINDOW_SHOWN);
+    with
+        _SDL_DestroyWindow(win);
+    end
+_assert(win != null);
+
+var _SDL_Renderer* ren;
+    finalize
+        ren = _SDL_CreateRenderer(win, -1, 0);
+    with
+        _SDL_DestroyRenderer(ren);
+    end
+_assert(ren != null);
+
+_srand(_time(null));
+
+var _SDL_Rect r1;
+    r1.w = 50;
+    r1.h = 50;
+    r1.x = 100;
+    r1.y = 100;
+
+var _SDL_Rect r2;
+    r2.w = 50;
+    r2.h = 50;
+    r2.x = 200;
+    r2.y = 300;
+
+par/or do
+    await SDL_QUIT;
+with
+    par/or do
+        loop do
+            loop i in 100 do
+                await 10ms;
+                r1.x = r1.x + 1;
+            end
+            loop i in 100 do
+                await 10ms;
+                r1.y = r1.y + 1;
+            end
+            loop i in 100 do
+                await 10ms;
+                r1.x = r1.x - 1;
+            end
+            loop i in 100 do
+                await 10ms;
+                r1.y = r1.y - 1;
+            end
+        end
+    with
+        var _SDL_MouseButtonEvent* but;
+        but = await SDL_MOUSEBUTTONDOWN
+            until _SDL_Rect_vs_Mouse(&r1, but);
+    end
+    await FOREVER;
+with
+    par/or do
+        loop do
+            loop i in 100 do
+                await 15ms;
+                r2.x = r2.x + 1;
+            end
+            loop i in 100 do
+                await 15ms;
+                r2.y = r2.y + 1;
+            end
+            loop i in 100 do
+                await 15ms;
+                r2.x = r2.x - 1;
+            end
+            loop i in 100 do
+                await 15ms;
+                r2.y = r2.y - 1;
+            end
+        end
+    with
+        var _SDL_MouseButtonEvent* but;
+        but = await SDL_MOUSEBUTTONDOWN
+            until _SDL_Rect_vs_Mouse(&r2, but);
+    end
+    await FOREVER;
+with
+    loop do
+        await SDL_REDRAW;
+
+        _SDL_SetRenderDrawColor(ren, 0xFF,0xFF,0xFF,0x00);
+        _SDL_RenderFillRect(ren, null);
+
+        _SDL_SetRenderDrawColor(ren, 0x00,0x00,0xFF,0x00);
+        _SDL_RenderFillRect(ren, &r1);
+        _SDL_RenderFillRect(ren, &r2);
+
+        _SDL_RenderPresent(ren);
+    end
+end
+
+escape 0;

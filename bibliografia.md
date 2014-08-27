@@ -49,6 +49,14 @@ Documentos
 Vídeos
 ------
 
+* [2012] *Ryan Gordon - "Open Source Tools for Game Development"*:
+
+    <https://www.youtube.com/watch?v=r3wDnOAjrtk>
+
+* [2012] *"Indie Game: The Movie"*
+
+    <http://vimeo.com/ondemand/indiegamethemovie/25268139>
+
 * [2013] *Rob Pike - "Concurrency Is Not Parallelism"*:
 
     <http://vimeo.com/49718712>

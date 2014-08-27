@@ -4,6 +4,14 @@
 Tarefas
 =======
 
+Tarefa 4 (05/09):
+-----------------
+
+* Fazer um jogo qualquer com menos de 250 loc
+    * Teclado e/ou Mouse
+    * Imagens e/ou Retângulos
+    * Animações (i.e., tempo como input)
+
 Tarefa 3 (29/08):
 -----------------
 

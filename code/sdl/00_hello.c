@@ -14,26 +14,25 @@ int main (int argc, char* args[])
                          );
     assert(window != NULL);
 
+    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
+    assert(renderer != NULL);
+
     /* EXECUTION */
 
-    SDL_Surface* screenSurface = SDL_GetWindowSurface(window);
-    assert(screenSurface != NULL);
-
-    SDL_FillRect(screenSurface, NULL,
-        SDL_MapRGB(screenSurface->format, 0xFF, 0xFF, 0xFF)
-    );
+    SDL_SetRenderDrawColor(renderer, 0xFF,0xFF,0xFF,0x00);
+    SDL_RenderFillRect(renderer, NULL);
 
     SDL_Rect r = { 200,200, 50, 50 };
-    SDL_FillRect(screenSurface, &r,
-        SDL_MapRGB(screenSurface->format, 0x00, 0x00, 0xFF)
-    );
-			
-    SDL_UpdateWindowSurface(window);
+    SDL_SetRenderDrawColor(renderer, 0x00,0x00,0xFF,0x00);
+    SDL_RenderFillRect(renderer, &r);
+
+    SDL_RenderPresent(renderer);
 
     SDL_Delay(5000);
 
     /* FINALIZATION */
 
+    SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
 
