@@ -30,6 +30,10 @@ Documentos
 
     <http://gameprogrammingpatterns.com/game-loop.html>
 
+* [2014] *Francisco Sant Anna - "Safe Concurrent Abstractions for Wireless Sensor Networks"*:
+
+    <http://ceu-lang.org/chico/ceu_sensys13_pre.pdf>
+
 * [-] *Wikipedia - Embarrassingly parallel*:
 
     <http://en.wikipedia.org/wiki/Embarrassingly_parallel>
@@ -64,3 +68,7 @@ Vídeos
 * [2013] *Evan Czaplicki - "Functional Reactive Programming in Elm"*:
 
     <http://www.infoq.com/presentations/elm-reactive-programming>
+
+* [2014] *Francisco Sant Anna - "Dynamic Organisms in Céu"*:
+
+    <http://vimeo.com/96915338>

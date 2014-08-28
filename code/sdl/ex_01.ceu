@@ -62,7 +62,7 @@ with
     with
         var _SDL_MouseButtonEvent* but;
         but = await SDL_MOUSEBUTTONDOWN
-            until _SDL_Rect_vs_Mouse(&r1, but);
+              until _SDL_Rect_vs_Mouse(&r1, but);
     end
     await FOREVER;
 with
@@ -88,7 +88,7 @@ with
     with
         var _SDL_MouseButtonEvent* but;
         but = await SDL_MOUSEBUTTONDOWN
-            until _SDL_Rect_vs_Mouse(&r2, but);
+              until _SDL_Rect_vs_Mouse(&r2, but);
     end
     await FOREVER;
 with
