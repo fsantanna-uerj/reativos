@@ -11,27 +11,26 @@ par/or do
     end
 with
     loop do
-        await PIN02;
-        await 200ms;
-        if dt > 200 then
-            dt = dt - 100;
-        end
+        var int on? = await PIN02
+                      until on? and (dt > 200);
+        dt = dt - 100;
+        await 50ms;
     end
 with
     loop do
-        await PIN03;
-        await 200ms;
+        var int on? = await PIN03
+                      until on?;
         dt = dt + 100;
+        await 50ms;
     end
 with
     loop do
         par/or do
-            await PIN02;
-            await PIN03;
-            break;
-        with
-            await PIN03;
-            await PIN02;
+            par/and do
+                await PIN02;
+            with
+                await PIN03;
+            end
             break;
         with
             par/or do
