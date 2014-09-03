@@ -1,0 +1,153 @@
+#include "sdl.ceu"
+
+input void SDL_REDRAW;
+input void SDL_QUIT;
+input void SDL_DT;
+input _SDL_MouseButtonEvent* SDL_MOUSEBUTTONDOWN;
+
+var int win_w;
+var int win_h;
+var _SDL_Window* win;
+    finalize
+        win = _SDL_CreateWindow("Example 1",
+                            0, 0, 640, 480, _SDL_WINDOW_SHOWN);
+    with
+        _SDL_DestroyWindow(win);
+    end
+_assert(win != null);
+
+native do
+    SDL_Renderer* REN;
+end
+finalize
+    _REN = _SDL_CreateRenderer(win, -1, 0);
+with
+    _SDL_DestroyRenderer(_REN);
+end
+_assert(_REN != null);
+
+_srand(_time(null));
+
+class Rect with
+    var _SDL_Rect  r;
+    var int        dt;
+    var _SDL_Color clr;
+do
+    this.r.w = 50;
+    this.r.h = 50;
+
+    par/or do
+        par/or do
+            loop do
+                loop i in 100 do
+                    await (this.dt)ms;
+                    this.r.x = this.r.x + 1;
+                end
+                loop i in 100 do
+                    await (this.dt)ms;
+                    this.r.y = this.r.y + 1;
+                end
+                loop i in 100 do
+                    await (this.dt)ms;
+                    this.r.x = this.r.x - 1;
+                end
+                loop i in 100 do
+                    await (this.dt)ms;
+                    this.r.y = this.r.y - 1;
+                end
+            end
+        with
+            var _SDL_MouseButtonEvent* but;
+            but = await SDL_MOUSEBUTTONDOWN
+                  until _SDL_Rect_vs_Mouse(&this.r, but);
+        end
+    with
+        every SDL_REDRAW do
+            _SDL_SetRenderDrawColor(_REN, clr.r,clr.g,clr.b,0x00);
+            _SDL_RenderFillRect(_REN, &this.r);
+        end
+    end
+end
+
+par/or do
+    await SDL_QUIT;
+with
+    every SDL_REDRAW do
+        _SDL_SetRenderDrawColor(_REN, 0xFF,0xFF,0xFF,0x00);
+        _SDL_RenderFillRect(_REN, null);
+    end
+with
+    _srand(_time());
+    var Rect r1 with
+        this.r.x = 50+_rand()%400;
+        this.r.y = 50+_rand()%300;
+        this.dt  = 10+_rand()%30;
+        this.clr.r = 0x00;
+        this.clr.g = 0x00;
+        this.clr.b = 0x00;
+    end;
+
+    var Rect r2 with
+        this.r.x = 50+_rand()%400;
+        this.r.y = 50+_rand()%300;
+        this.dt  = 10+_rand()%30;
+        this.clr.r = 0x00;
+        this.clr.g = 0x00;
+        this.clr.b = 0x00;
+    end;
+
+    loop do
+        pool Rect[2] p;
+        var Rect[10] rs with
+            this.r.x = 50+_rand()%400;
+            this.r.y = 50+_rand()%300;
+            this.dt  = 10+_rand()%30;
+        end;
+        par/or do
+            every 1s do
+                spawn Rect in p with
+                    this.r.x = 50+_rand()%400;
+                    this.r.y = 50+_rand()%300;
+                    this.dt  = 10+_rand()%30;
+                    this.clr.r = 0x00;
+                    this.clr.g = 0xFF;
+                    this.clr.b = 0x00;
+                end;
+            end
+        with
+            every SDL_DT do
+                loop i in 10 do
+                    rs[i].clr.r = 0x00;
+                    rs[i].clr.g = 0x00;
+                    rs[i].clr.b = 0xFF;
+                    loop j in 10 do
+                        if i!=j and _SDL_HasIntersection(&rs[i].r, &rs[j].r) then
+                            rs[i].clr.r = 0xFF;
+                            rs[i].clr.g = 0x00;
+                            rs[i].clr.b = 0x00;
+                            break;
+                        end
+                    end
+                    loop (Rect*)ptr in p do
+                        if _SDL_HasIntersection(&rs[i].r, &ptr:r) then
+                            rs[i].clr.r = 0xFF;
+                            rs[i].clr.g = 0x00;
+                            rs[i].clr.b = 0x00;
+                            break;
+                        end
+                    end
+                end
+            end
+        with
+            await 10s;
+        end
+    end
+
+    await FOREVER;
+with
+    every SDL_REDRAW do
+        _SDL_RenderPresent(_REN);
+    end
+end
+
+escape 0;
