@@ -36,6 +36,10 @@ do
     this.r.w = 50;
     this.r.h = 50;
 
+    finalize with
+        _printf("abortado\n");
+    end
+
     par/or do
         par/or do
             loop do
