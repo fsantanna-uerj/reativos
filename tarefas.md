@@ -70,7 +70,7 @@ Tarefa 1 (21/08):
 
 * Criar um projeto no github
     * Criar uma conta no github.com (caso não tenha)
-    * Criar um projeto “reativos”
+    * Criar um projeto "reativos"
     * Mandar um e-mail para a lista com o link do seu projeto
 
 * Instalar o Arduino IDE
