@@ -68,6 +68,7 @@ Programa detalhado
 
 <!-- - Escolher uma outra ferramenta e discutir o modelo de execução. -->
 
+<!--
 Aulas
 -----
 
@@ -79,11 +80,11 @@ Aulas
     <li> Arduino
     <li> Tarefa-1, Tarefa-2, Artigos&Videos-1
 </ul>
-<!--
+!--
     Avaliação.
     Github.
     Artigos.
--->
+--
 </td></tr>
 <tr><th>2</th><th>22-08</th><td>
 <ul>
@@ -93,7 +94,7 @@ Aulas
     <li> Modelo Síncrono
     <li> Arduino Chibi-OS, Occam-PI, Céu
 </ul>
-<!--
+!--
     <li> Padrão Observer
     Exemplo do Blink.
     Esquemas de implementação do modelo síncrono.
@@ -104,16 +105,16 @@ Aulas
     - Lua/Love
         Primeira tarefa que envolva uma máquina de estados potencialmente 
         hierárquica.
--->
+--
 </td></tr>
 <tr><th>3</th><th>29-08</th><td>
     <br/>
-<!--
+!--
 <ul>
     <li> Máquinas de estado / Hierárquicas
     <li> Arduino (C, Céu)
 </ul>
--->
+--
 </td></tr>
 <tr><th>4</th><th>05-09</th><td><br/></td></tr>
 <tr><th>5</th><th>12-09</th><td><br/></td></tr>
@@ -131,3 +132,4 @@ Aulas
 <tr><th>17</th><th>05-12</th><td><br/></td></tr>
 <tr><th>18</th><th>12-12</th><td><br/></td></tr>
 </table>
+-->
