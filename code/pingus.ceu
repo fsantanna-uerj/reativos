@@ -1,0 +1,49 @@
+class ArmageddonButton with
+    <...>
+do
+    par do
+        <...>
+    with
+        loop do
+            par/or do
+                await ON_CLICK;
+                await ON_CLICK;
+                _DETROY_EVERYTHING();
+            with
+                await 1s;
+            end
+        end
+    end
+end
+
+class ArmageddonButton {
+    private:
+        bool  pressed    = false;
+        float press_time = 0;
+    <...>
+};
+
+<...>
+
+void ArmageddonButton::on_update (float delta) {
+    if (this.pressed) {
+        this.press_time += delta;
+        if (this.press_time > 1.0f) {
+            this.press_time = 0;
+            this.pressed = false;
+        }
+    } else {
+        this.pressed = false;
+        this.press_time = 0;
+    }
+}
+
+void ArmageddonButton::on_click (int x, int y) {
+    if (this.pressed) {
+        DESTROY_EVERYTHING();
+    } else {
+        pressed = true;
+    }
+}
+
+
