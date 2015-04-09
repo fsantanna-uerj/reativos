@@ -6,22 +6,20 @@ input _SDL_MouseButtonEvent* SDL_MOUSEBUTTONDOWN;
 
 var int win_w;
 var int win_h;
-var _SDL_Window* win;
+var _SDL_Window&? win;
     finalize
         win = _SDL_CreateWindow("Example 1",
                             0, 0, 640, 480, _SDL_WINDOW_SHOWN);
     with
-        _SDL_DestroyWindow(win);
+        _SDL_DestroyWindow(&win);
     end
-_assert(win != null);
 
-var _SDL_Renderer* ren;
+var _SDL_Renderer&? ren;
     finalize
-        ren = _SDL_CreateRenderer(win, -1, 0);
+        ren = _SDL_CreateRenderer(&win, -1, 0);
     with
-        _SDL_DestroyRenderer(ren);
+        _SDL_DestroyRenderer(&ren);
     end
-_assert(ren != null);
 
 _srand(_time(null));
 
