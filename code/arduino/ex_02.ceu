@@ -1,5 +1,5 @@
-input  void PIN02, PIN03;
-output int  PIN13;
+input  int PIN02, PIN03;
+output int PIN13;
 
 var int dt = 1000;
 par/or do
@@ -11,15 +11,15 @@ par/or do
     end
 with
     loop do
-        var int on? = await PIN02
-                      until on? and (dt > 200);
+        var int on = await PIN02
+                     until on and (dt > 200);
         dt = dt - 100;
         await 50ms;
     end
 with
     loop do
-        var int on? = await PIN03
-                      until on?;
+        var int on = await PIN03
+                     until on;
         dt = dt + 100;
         await 50ms;
     end

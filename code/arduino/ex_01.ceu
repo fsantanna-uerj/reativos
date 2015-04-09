@@ -10,8 +10,8 @@ par/or do
     end
 with
     loop do
-        var int on? = await PIN02;
-        if on? then
+        var int on = await PIN02;
+        if on then
             break;
         end
     end
