@@ -7,20 +7,19 @@ input _SDL_MouseButtonEvent* SDL_MOUSEBUTTONDOWN;
 
 var int win_w;
 var int win_h;
-var _SDL_Window* win;
+var _SDL_Window&? win;
     finalize
         win = _SDL_CreateWindow("Example 1",
                             0, 0, 640, 480, _SDL_WINDOW_SHOWN);
     with
-        _SDL_DestroyWindow(win);
+        _SDL_DestroyWindow(&win);
     end
-_assert(win != null);
 
 native do
     SDL_Renderer* REN;
 end
 finalize
-    _REN = _SDL_CreateRenderer(win, -1, 0);
+    _REN = _SDL_CreateRenderer(&win, -1, 0);
 with
     _SDL_DestroyRenderer(_REN);
 end
@@ -132,7 +131,7 @@ with
                             break;
                         end
                     end
-                    loop (Rect*)ptr in p do
+                    loop ptr in p do
                         if _SDL_HasIntersection(&rs[i].r, &ptr:r) then
                             rs[i].clr.r = 0xFF;
                             rs[i].clr.g = 0x00;
