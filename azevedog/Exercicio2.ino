@@ -1,5 +1,3 @@
-#include <ChibiOS.h>
-
 int LED = 9;
 int BTN_UP = 2;
 int BTN_DWN = 3;
