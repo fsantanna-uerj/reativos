@@ -34,6 +34,7 @@ void serial_init(void) {
   sei();
 }
 
+// Envia uma string pela porta serial
 void serial_print(char * str) {
   int i = 0;
   while (str[i]) {
@@ -44,6 +45,7 @@ void serial_print(char * str) {
   }
 }
 
+// Substituto de printf
 char serial_buffer[256];
 void serial_printf(char * fmt, ...) {
   va_list args;
