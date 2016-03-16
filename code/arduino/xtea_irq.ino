@@ -119,9 +119,9 @@ ISR(USART_RX_vect) {
  char a = UDR0; // Lê o caracter recebido
 
  switch (a) {
-   case '\r': flag = flag ^ 1; break;                  // Muda o flag
    case '1':  led = 0; digitalWrite(LED, LOW);  break; // Desliga o LED
    case '2':  led = 1; digitalWrite(LED, HIGH); break; // Liga o LED
+   case '3':  flag = flag ^ 1; break;                  // Muda o flag
    default: break;
  }
 }
