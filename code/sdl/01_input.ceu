@@ -25,11 +25,7 @@ var _SDL_Renderer&? renderer;
 
 /* EXECUTION */
 
-var _SDL_Rect r;
-    r.x = 200;
-    r.y = 200;
-    r.h = 50;
-    r.w = 50;
+var _SDL_Rect r = _SDL_Rect(200,200, 50,50);
 
 par/or do
     await SDL_QUIT;

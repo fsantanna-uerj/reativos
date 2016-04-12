@@ -20,19 +20,8 @@ var _SDL_Renderer&? renderer;
         _SDL_DestroyRenderer(&&renderer!);
     end
 
-_srand(_time(null));
-
-var _SDL_Rect r1;
-    r1.w = 50;
-    r1.h = 50;
-    r1.x = 100;
-    r1.y = 100;
-
-var _SDL_Rect r2;
-    r2.w = 50;
-    r2.h = 50;
-    r2.x = 200;
-    r2.y = 300;
+var _SDL_Rect r1 = _SDL_Rect(100,100, 50,50);
+var _SDL_Rect r2 = _SDL_Rect(200,300, 50,50);
 
 par/or do
     await SDL_QUIT;

@@ -21,16 +21,11 @@ var _SDL_Renderer&? renderer;
         _SDL_DestroyRenderer(&&renderer!);
     end
 
-_srand(_time(null));
-
 class Rect with
     var _SDL_Renderer& ren;
     var _SDL_Rect      r;
     var int            dt;
 do
-    this.r.w = 50;
-    this.r.h = 50;
-
     par do
         par/or do
             loop do
@@ -73,20 +68,16 @@ with
         _SDL_RenderFillRect(&&renderer!, null);
     end
 with
-    _srand(_time());
-
     var Rect r1 with
         this.ren = &renderer!;
-        this.r.x = 50+_rand()%400;
-        this.r.y = 50+_rand()%300;
-        this.dt  = 10+_rand()%30;
+	this.r   = _SDL_Rect(100,100, 50,50);
+        this.dt  = 20;
     end;
 
     var Rect r2 with
         this.ren = &renderer!;
-        this.r.x = 50+_rand()%400;
-        this.r.y = 50+_rand()%300;
-        this.dt  = 10+_rand()%30;
+	this.r   = _SDL_Rect(200,300, 50,50);
+        this.dt  = 30;
     end;
 
     await FOREVER;
