@@ -9,11 +9,12 @@ int main (int argc, char* args[])
     assert(err == 0);
 
     SDL_Window* window = SDL_CreateWindow("Input",
-                            SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
+                            SDL_WINDOWPOS_UNDEFINED,
+                            SDL_WINDOWPOS_UNDEFINED,
                             640, 480, SDL_WINDOW_SHOWN);
     assert(window != NULL);
 
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
+    SDL_Renderer* renderer = SDL_CreateRenderer(window,-1,0);
     assert(renderer != NULL);
 
     /* EXECUTION */
@@ -45,10 +46,10 @@ int main (int argc, char* args[])
             }
         }
 
-        SDL_SetRenderDrawColor(renderer, 0xFF,0xFF,0xFF,0x00);
+        SDL_SetRenderDrawColor(renderer,0xFF,0xFF,0xFF,0x00);
         SDL_RenderFillRect(renderer, NULL);
 
-        SDL_SetRenderDrawColor(renderer, 0x00,0x00,0xFF,0x00);
+        SDL_SetRenderDrawColor(renderer,0x00,0x00,0xFF,0x00);
         SDL_RenderFillRect(renderer, &r);
 
         SDL_RenderPresent(renderer);

@@ -6,7 +6,8 @@
 var _SDL_Window&? window;
     finalize
         window = &_SDL_CreateWindow("Hello World!",
-                    _SDL_WINDOWPOS_UNDEFINED, _SDL_WINDOWPOS_UNDEFINED,
+                    _SDL_WINDOWPOS_UNDEFINED,
+                    _SDL_WINDOWPOS_UNDEFINED,
                     640, 480, _SDL_WINDOW_SHOWN);
     with
         _SDL_DestroyWindow(&&window!);

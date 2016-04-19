@@ -7,8 +7,9 @@ input _SDL_MouseButtonEvent&& SDL_MOUSEBUTTONDOWN;
 
 var _SDL_Window&? window;
     finalize
-        window = &_SDL_CreateWindow("Exercicio 1 - Organismos",
-                    _SDL_WINDOWPOS_UNDEFINED, _SDL_WINDOWPOS_UNDEFINED,
+        window = &_SDL_CreateWindow("Exercicio 1",
+                    _SDL_WINDOWPOS_UNDEFINED,
+                    _SDL_WINDOWPOS_UNDEFINED,
                     640, 480, _SDL_WINDOW_SHOWN);
     with
         _SDL_DestroyWindow(&&window!);
@@ -54,7 +55,8 @@ do
         await FOREVER;
     with
         every SDL_REDRAW do
-            _SDL_SetRenderDrawColor(&&this.ren, 0x00,0x00,0xFF,0x00);
+            _SDL_SetRenderDrawColor(&&this.ren,
+                                    0x00,0x00,0xFF,0x00);
             _SDL_RenderFillRect(&&this.ren, &&this.r);
         end
     end
@@ -64,19 +66,20 @@ par/or do
     await SDL_QUIT;
 with
     every SDL_REDRAW do
-        _SDL_SetRenderDrawColor(&&renderer!, 0xFF,0xFF,0xFF,0x00);
+        _SDL_SetRenderDrawColor(&&renderer!,
+                                0xFF,0xFF,0xFF,0x00);
         _SDL_RenderFillRect(&&renderer!, null);
     end
 with
     var Rect r1 with
         this.ren = &renderer!;
-	this.r   = _SDL_Rect(100,100, 50,50);
+        this.r   = _SDL_Rect(100,100, 50,50);
         this.dt  = 20;
     end;
 
     var Rect r2 with
         this.ren = &renderer!;
-	this.r   = _SDL_Rect(200,300, 50,50);
+        this.r   = _SDL_Rect(200,300, 50,50);
         this.dt  = 30;
     end;
 
