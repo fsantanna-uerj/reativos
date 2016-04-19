@@ -1,0 +1,176 @@
+#include "sdl.ceu"
+#include "sdl-gfx.ceu"
+
+input void SDL_QUIT;
+input void SDL_REDRAW;
+input int SDL_DT;
+input _SDL_MouseButtonEvent&& SDL_MOUSEBUTTONDOWN;
+
+native do
+    SDL_Renderer* REN = NULL;
+    int REN_W, REN_H;
+    ##define ID(x) x
+end
+native @pure _ID();
+
+var _SDL_Window&? win;
+    finalize
+        win = &_SDL_CreateWindow("Birds",
+                _SDL_WINDOWPOS_UNDEFINED, _SDL_WINDOWPOS_UNDEFINED,
+                640, 480, _SDL_WINDOW_SHOWN);
+    with
+        _SDL_DestroyWindow(&&win!);
+    end
+
+_SDL_GetWindowSize(&&win!, &&_REN_W, &&_REN_H);
+
+finalize
+    _REN = _SDL_CreateRenderer(&&win!, -1, 0);
+with
+    _SDL_DestroyRenderer(_REN);
+end
+
+native do
+    SDL_Texture* TEX_UP, *TEX_DOWN;
+end
+    finalize
+        _TEX_UP = _IMG_LoadTexture(_REN, "clumsy_up.png");
+    with
+        _SDL_DestroyTexture(_TEX_UP);
+    end
+    finalize
+        _TEX_DOWN = _IMG_LoadTexture(_REN, "clumsy_down.png");
+    with
+        _SDL_DestroyTexture(_TEX_DOWN);
+    end
+
+#define PI 3.14
+
+class Bird with
+    var _SDL_Renderer& ren;
+    var _SDL_Rect r;
+    var int speed;
+    event void go_collide;
+do
+    this.r.x = 20;
+    this.r.w = 50;
+    this.r.h = 45;
+
+    var bool is_visible = true;
+
+    var float sin = 0;
+    par/or do
+        var bool is_dead =
+            par do
+                var int y = r.y;
+                var float x = r.x;
+                loop do
+                    var int dt = await SDL_DT;
+                    var float v = dt*speed;
+                    x = x + v/1000;
+                    r.x = x;
+                    r.y = y + speed/5*_sin(sin);
+                    sin = sin + PI*v/100000;
+                    if r.x > 580 then
+                        escape false;
+                    end
+                end
+            with
+                await this.go_collide;
+                escape true;
+            end;
+
+        if is_dead then
+            var float y = r.y;
+            loop do
+                var int dt = await SDL_DT;
+                y = y + dt*0.5;
+                r.y = y;
+                if r.y >= 400 then
+                    r.y = 400;
+                    break;
+                end
+            end
+
+            par/or do
+                await 1s;
+            with
+                every 100ms do
+                    is_visible = not is_visible;
+                end
+            end
+        end
+    with
+        every SDL_REDRAW do
+            if is_visible then
+                if ((int)((sin+PI/2)/PI)) % 2 == 0 then
+                    _SDL_RenderCopy(&&ren, _TEX_DOWN, null, &&r);
+                else
+                    _SDL_RenderCopy(&&ren, _TEX_UP, null, &&r);
+                end
+            end
+        end
+    end
+end
+
+par/or do
+    every SDL_REDRAW do
+        _SDL_SetRenderDrawColor(_REN, 0x00,0x00,0x00, 0xFF);
+        _SDL_RenderFillRect(_REN, null);
+    end
+with
+    pool Bird[] birds;
+    par do
+        every 750ms do
+            spawn Bird in birds with
+                this.ren   = &_ID(_REN);
+                this.r     = _SDL_Rect(0, 20+_rand()%350, 0,0);
+                this.speed = 100 + _rand()%100;
+            end;
+        end
+    with
+        every SDL_DT do
+            var Bird&&?[] tocol;
+            loop b1 in birds do
+                loop b2 in birds do
+                    if b1!=b2 and _SDL_HasIntersection(&&b1:r,&&b2:r) then
+                        tocol = []..tocol..[b1];
+                    end
+                end
+            end
+            loop i in $tocol do
+                if tocol[i]? then
+                    emit tocol[i]!:go_collide;
+                end
+            end
+        end
+    with
+        loop do
+            var _SDL_MouseButtonEvent&& mse = await SDL_MOUSEBUTTONDOWN;
+            var Bird&& ptr = null;
+            loop b in birds do
+                if _SDL_Rect_vs_Mouse(&&b:r,mse) then
+                    ptr = b;
+                    break;
+                end
+            end
+            if ptr != null then
+                watching *ptr do
+                    every SDL_REDRAW do
+                        _SDL_SetRenderDrawColor(_REN, 0xFF,0xFF,0xFF, 0xFF);
+                        _SDL_RenderDrawLine(_REN, 320,480,
+                                                 ptr:r.x+20,ptr:r.y+20);
+                    end
+                end
+            end
+        end
+    end
+with
+    every SDL_REDRAW do
+        _SDL_RenderPresent(_REN);
+    end
+with
+    await SDL_QUIT;
+end
+
+escape 0;
