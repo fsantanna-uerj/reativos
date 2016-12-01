@@ -21,6 +21,7 @@ Ementa: Sistemas Reativos, Modelos de Concorrência Síncrono e Assíncrono,
 Padrão *Observer*, Máquinas de Estado, Corrotinas, Programação Reativa 
 Funcional, Jogos, Arduino, Redes de Sensores sem Fio, Projeto.
 
+<!--
 Programa detalhado
 ------------------
 
@@ -66,9 +67,8 @@ Programa detalhado
     - Pequenos projetos
     - Projeto final
 
-<!-- - Escolher uma outra ferramenta e discutir o modelo de execução. -->
+!-- - Escolher uma outra ferramenta e discutir o modelo de execução. --
 
-<!--
 Aulas
 -----
 
