@@ -1,25 +1,32 @@
-<title>Disciplina de Sistemas Reativos</title>
+<title>Sistemas Reativos</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/></p>
 
-Disciplina de Sistemas Reativos
-===============================
+Sistemas Reativos
+=================
 
 Apresentação
 ------------
 
-Sistemas reativos interagem continuamente com o ambiente sob os quais estão 
-inseridos.
-Eles representam um campo amplo de aplicações e plataformas de hardware:
-de jogos eletrônicos em *desktops*, passando por *apps* em celulares 
-inteligentes, até a emergente internet das coisas em sistemas embarcados.
+Sistemas reativos interagem continuamente e em tempo real com o ambiente sob os
+quais estão inseridos.
+Eles representam um campo amplo de aplicações e plataformas: de jogos
+eletrônicos em *desktops*, passando por *apps* em celulares, até a emergente
+internet das coisas em sistemas embarcados.
 
-Neste curso iremos abordar os sistemas reativos sob diversos aspectos de 
-software: modelos de concorrência, linguagens, técnicas de programação, e 
-aplicações em diversas plataformas.
+Neste curso iremos abordar os sistemas reativos sob diversos aspectos de
+software, tais como modelos de concorrência, linguagens de programação,
+técnicas de programação, e aplicações em múltiplas plataformas de hardware.
 
-Ementa: Sistemas Reativos, Modelos de Concorrência Síncrono e Assíncrono, 
-Padrão *Observer*, Máquinas de Estado, Corrotinas, Programação Reativa 
-Funcional, Jogos, Arduino, Redes de Sensores sem Fio, Projeto.
+Ementa:
+Sistemas Reativos, Modelos de Concorrência Síncrono e Assíncrono, Programação
+Orientada a Eventos, Callbacks e o Padrão *Observer*, Máquinas de Estado,
+Co-rotinas, Programação Reativa Funcional, Programação Reativa Estruturada,
+Jogos, Arduino, Redes de Sensores sem Fio, Projetos.
+
+Exemplos de Projetos
+--------------------
+
+https://github.com/fsantanna-uerj/reativos-videos/
 
 <!--
 Programa detalhado
