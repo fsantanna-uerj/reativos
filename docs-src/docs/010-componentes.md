@@ -1,9 +1,11 @@
-Botão
-=====
+Botão de Pressão
+================
+
+![Screenshot](imagens/botao-01.png)
 
 https://circuits.io/circuits/3568686-exercicio-1/
 
-![Screenshot](imagens/botao.png)
+![Screenshot](imagens/botao-02.png)
 
 ```
 void setup() {                
