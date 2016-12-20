@@ -1,0 +1,7 @@
+site_name: Sistemas Reativos
+theme:     readthedocs
+#site_dir:  site/v0.20
+
+pages:
+- Home:       index.md
+- Components: 010-componentes.md

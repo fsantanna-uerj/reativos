@@ -1,0 +1,24 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Sistemas Reativos\n\n\nhttps://github.com/fsantanna/ceu-libuv\n\n\n\n\nComponentes", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#sistemas-reativos", 
+            "text": "https://github.com/fsantanna/ceu-libuv   Componentes", 
+            "title": "Sistemas Reativos"
+        }, 
+        {
+            "location": "/010-componentes/", 
+            "text": "Bot\u00e3o\n\n\n\n\nvoid setup() {                \n  pinMode(13, OUTPUT);     \n  pinMode( 2, INPUT);     \n}\n\nvoid loop() {\n  int v = digitalRead(2);\n  digitalWrite(13, v);\n}", 
+            "title": "Components"
+        }, 
+        {
+            "location": "/010-componentes/#botao", 
+            "text": "void setup() {                \n  pinMode(13, OUTPUT);     \n  pinMode( 2, INPUT);     \n}\n\nvoid loop() {\n  int v = digitalRead(2);\n  digitalWrite(13, v);\n}", 
+            "title": "Bot\u00e3o"
+        }
+    ]
+}
