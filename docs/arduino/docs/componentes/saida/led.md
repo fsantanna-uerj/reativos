@@ -1,4 +1,4 @@
-#### LED
+### LED
 
 <img src="../imagens/led-01.jpg" align="right" width="200">
 
@@ -19,7 +19,7 @@ Caso o circuito do botão tenha sido montado como *NO*, a leitura do pino será
 Caso o circuito do botão tenha sido montado como *NC*, a leitura do pino será
 `HIGH` no estado de repouso e `LOW` no estado pressionado.
 
-##### Exemplo
+#### Exemplo
 
 No exemplo a seguir, o botão é montado como *NO*, uma vez que a porta de
 leitura é ligada .
@@ -40,7 +40,7 @@ void loop() {
 }
 ```
 
-##### Links
+#### Links
 
 - Wikipedia:   <https://pt.wikipedia.org/wiki/Diodo_emissor_de_luz>
 - Arduino.cc:  <https://www.arduino.cc/en/Tutorial/Button>

@@ -1,4 +1,4 @@
-#### Botão de Pressão
+### Botão de Pressão
 
 <img src="../imagens/botao-01.jpg" align="right" width="200">
 
@@ -19,7 +19,7 @@ Caso o circuito do botão tenha sido montado como *NO*, a leitura do pino será
 Caso o circuito do botão tenha sido montado como *NC*, a leitura do pino será
 `HIGH` no estado de repouso e `LOW` no estado pressionado.
 
-##### Exemplo
+#### Exemplo
 
 No exemplo a seguir, o botão é montado como *NO*, uma vez que a porta de
 leitura é ligada .
@@ -40,7 +40,7 @@ void loop() {
 }
 ```
 
-##### Links
+#### Links
 
 - Wikipedia:   <https://pt.wikipedia.org/wiki/Bot%C3%A3o_de_press%C3%A3o>
 - Arduino.cc:  <https://www.arduino.cc/en/Tutorial/Button>
