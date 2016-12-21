@@ -67,8 +67,22 @@
 
         
             
+    <li class="toctree-l1 ">
+        <a class="" href="../../">Componentes</a>
+        
+    </li>
+
+        
+            
     <ul class="subnav">
     <li><span>Entrada</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Entrada</a>
+        
+    </li>
 
         
             
@@ -95,6 +109,13 @@
             
     <ul class="subnav">
     <li><span>Saída</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../saida/">Saída</a>
+        
+    </li>
 
         
             
@@ -150,43 +171,49 @@
           <div role="main">
             <div class="section">
               
-                <h4 id="botao-de-pressao">Botão de Pressão</h4>
+                <h3 id="botao-de-pressao">Botão de Pressão</h3>
 <p><img src="../imagens/botao-01.jpg" align="right" width="200"></p>
-<p>Um botão de pressão é similar a um interruptor de parede e é usado para fechar
+<p>O botão de pressão é similar a um interruptor de parede e é usado para fechar
 ou abrir um circuito eléctrico.
-Tipicamente, um  botão de pressão inclui um mecanismo que o retorna ao estado
+Tipicamente, o botão de pressão inclui um mecanismo que o retorna ao estado
 de repouso quando a força de atuação não é mais aplicada.
-Em seu estado de repouso, um botão pode ter os seus contatos abertos (i.e.,
+Em seu estado de repouso, o botão pode ter os seus contatos abertos (i.e.,
 <em>NO: normally open</em>) ou fechados (i.e., <em>NC: normally closed</em>).</p>
-<p>No Arduino, um dos lados do botão de pressão deve ser conectado ao <code>5V</code> e o
-outro ao <code>GND</code>.
+<p>No Arduino, um dos lados do botão de pressão deve ser conectado ao <code>5V</code> (fonte)
+e o outro ao <code>GND</code> (terra).
 Além disso, um dos lados deve ser contectado a um pino digital de <code>INPUT</code>,
-fornecendo o estado do botão ao Arduino.</p>
+fornecendo o estado do botão ao Arduino.
+Os lados devem ser separados por um resistor para controlar a corrente.</p>
 <p>Caso o circuito do botão tenha sido montado como <em>NO</em>, a leitura do pino será
 <code>LOW</code> no estado de repouso e <code>HIGH</code> no estado pressionado.
 Caso o circuito do botão tenha sido montado como <em>NC</em>, a leitura do pino será
 <code>HIGH</code> no estado de repouso e <code>LOW</code> no estado pressionado.</p>
-<h5 id="exemplo">Exemplo</h5>
-<p>No exemplo a seguir, o botão é montado como <em>NO</em>, uma vez que a porta de
-leitura é ligada .</p>
-<p>No circuito a seguir, o botão está ligado como <em>NO</em>, uma vez que a leitura
-<img src="../imagens/botao-02.png" width="400"></p>
+<h4 id="exemplo">Exemplo</h4>
+<p>O exemplo a seguir faz com que o LED embutido na placa do Arduino acompanhe o
+estado do botão, ou seja, fique ligado caso o botão esteja pressionado e
+desligado caso contrário.</p>
+<p>O circuito usa um botão <em>NO</em> ligado ao pino <code>2</code>:</p>
+<p><img src="../imagens/botao-02.png" width="400"></p>
+<p>O código configura o pino <code>13</code> (ligado ao LED da placa) como <code>OUTPUT</code> e o pino
+<code>2</code> (ligado ao botão) como <code>INPUT</code>.
+Em seguida, o <code>loop</code> do Arduino lê o estado do botão continuamente e o repassa
+ao LED:</p>
 <pre><code>void setup() {                
-  pinMode(13, OUTPUT);     
-  pinMode( 2, INPUT);     
+    pinMode(13, OUTPUT);     
+    pinMode( 2, INPUT);     
 }
 
 void loop() {
-  int v = digitalRead(2);
-  digitalWrite(13, v);
+    int v = digitalRead(2);
+    digitalWrite(13, v);
 }
 </code></pre>
 
-<h5 id="links">Links</h5>
+<h4 id="links">Links</h4>
 <ul>
 <li>Wikipedia:   <a href="https://pt.wikipedia.org/wiki/Bot%C3%A3o_de_press%C3%A3o">https://pt.wikipedia.org/wiki/Bot%C3%A3o_de_press%C3%A3o</a></li>
 <li>Arduino.cc:  <a href="https://www.arduino.cc/en/Tutorial/Button">https://www.arduino.cc/en/Tutorial/Button</a></li>
-<li>Circuits.io: <a href="https://circuits.io/circuits/3568686-exercicio-1/">https://circuits.io/circuits/3568686-exercicio-1/</a></li>
+<li>Circuits.io: <a href="https://circuits.io/circuits/3568686-botao-de-pressao">https://circuits.io/circuits/3568686-botao-de-pressao</a></li>
 <li><a href="../../saida/led/">LED</a></li>
 </ul>
               
@@ -196,10 +223,10 @@ void loop() {
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../saida/led/" class="btn btn-neutral float-right" title="LED">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../saida/" class="btn btn-neutral float-right" title="Saída">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../" class="btn btn-neutral" title="Entrada"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -225,10 +252,10 @@ void loop() {
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../saida/led/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../saida/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

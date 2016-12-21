@@ -2,52 +2,77 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Arduino\n\n\n\n\nComponentes\n\n\nEntrada\n\n\nBot\u00e3o de Press\u00e3o\n\n\n\n\n\n\nSa\u00edda\n\n\nLED", 
+            "text": "TODO", 
             "title": "Home"
         }, 
         {
-            "location": "/#arduino", 
-            "text": "Componentes  Entrada  Bot\u00e3o de Press\u00e3o    Sa\u00edda  LED", 
-            "title": "Arduino"
+            "location": "/componentes/", 
+            "text": "Componentes\n\n\nTODO", 
+            "title": "Componentes"
+        }, 
+        {
+            "location": "/componentes/#componentes", 
+            "text": "TODO", 
+            "title": "Componentes"
+        }, 
+        {
+            "location": "/componentes/entrada/", 
+            "text": "Entrada\n\n\nTODO", 
+            "title": "Entrada"
+        }, 
+        {
+            "location": "/componentes/entrada/#entrada", 
+            "text": "TODO", 
+            "title": "Entrada"
         }, 
         {
             "location": "/componentes/entrada/botao-de-pressao/", 
-            "text": "Bot\u00e3o de Press\u00e3o\n\n\n\n\nUm bot\u00e3o de press\u00e3o \u00e9 similar a um interruptor de parede e \u00e9 usado para fechar\nou abrir um circuito el\u00e9ctrico.\nTipicamente, um  bot\u00e3o de press\u00e3o inclui um mecanismo que o retorna ao estado\nde repouso quando a for\u00e7a de atua\u00e7\u00e3o n\u00e3o \u00e9 mais aplicada.\nEm seu estado de repouso, um bot\u00e3o pode ter os seus contatos abertos (i.e.,\n\nNO: normally open\n) ou fechados (i.e., \nNC: normally closed\n).\n\n\nNo Arduino, um dos lados do bot\u00e3o de press\u00e3o deve ser conectado ao \n5V\n e o\noutro ao \nGND\n.\nAl\u00e9m disso, um dos lados deve ser contectado a um pino digital de \nINPUT\n,\nfornecendo o estado do bot\u00e3o ao Arduino.\n\n\nCaso o circuito do bot\u00e3o tenha sido montado como \nNO\n, a leitura do pino ser\u00e1\n\nLOW\n no estado de repouso e \nHIGH\n no estado pressionado.\nCaso o circuito do bot\u00e3o tenha sido montado como \nNC\n, a leitura do pino ser\u00e1\n\nHIGH\n no estado de repouso e \nLOW\n no estado pressionado.\n\n\nExemplo\n\n\nNo exemplo a seguir, o bot\u00e3o \u00e9 montado como \nNO\n, uma vez que a porta de\nleitura \u00e9 ligada .\n\n\nNo circuito a seguir, o bot\u00e3o est\u00e1 ligado como \nNO\n, uma vez que a leitura\n\n\n\nvoid setup() {                \n  pinMode(13, OUTPUT);     \n  pinMode( 2, INPUT);     \n}\n\nvoid loop() {\n  int v = digitalRead(2);\n  digitalWrite(13, v);\n}\n\n\n\n\nLinks\n\n\n\n\nWikipedia:   \nhttps://pt.wikipedia.org/wiki/Bot%C3%A3o_de_press%C3%A3o\n\n\nArduino.cc:  \nhttps://www.arduino.cc/en/Tutorial/Button\n\n\nCircuits.io: \nhttps://circuits.io/circuits/3568686-exercicio-1/\n\n\nLED", 
+            "text": "Bot\u00e3o de Press\u00e3o\n\n\n\n\nO bot\u00e3o de press\u00e3o \u00e9 similar a um interruptor de parede e \u00e9 usado para fechar\nou abrir um circuito el\u00e9ctrico.\nTipicamente, o bot\u00e3o de press\u00e3o inclui um mecanismo que o retorna ao estado\nde repouso quando a for\u00e7a de atua\u00e7\u00e3o n\u00e3o \u00e9 mais aplicada.\nEm seu estado de repouso, o bot\u00e3o pode ter os seus contatos abertos (i.e.,\n\nNO: normally open\n) ou fechados (i.e., \nNC: normally closed\n).\n\n\nNo Arduino, um dos lados do bot\u00e3o de press\u00e3o deve ser conectado ao \n5V\n (fonte)\ne o outro ao \nGND\n (terra).\nAl\u00e9m disso, um dos lados deve ser contectado a um pino digital de \nINPUT\n,\nfornecendo o estado do bot\u00e3o ao Arduino.\nOs lados devem ser separados por um resistor para controlar a corrente.\n\n\nCaso o circuito do bot\u00e3o tenha sido montado como \nNO\n, a leitura do pino ser\u00e1\n\nLOW\n no estado de repouso e \nHIGH\n no estado pressionado.\nCaso o circuito do bot\u00e3o tenha sido montado como \nNC\n, a leitura do pino ser\u00e1\n\nHIGH\n no estado de repouso e \nLOW\n no estado pressionado.\n\n\nExemplo\n\n\nO exemplo a seguir faz com que o LED embutido na placa do Arduino acompanhe o\nestado do bot\u00e3o, ou seja, fique ligado caso o bot\u00e3o esteja pressionado e\ndesligado caso contr\u00e1rio.\n\n\nO circuito usa um bot\u00e3o \nNO\n ligado ao pino \n2\n:\n\n\n\n\nO c\u00f3digo configura o pino \n13\n (ligado ao LED da placa) como \nOUTPUT\n e o pino\n\n2\n (ligado ao bot\u00e3o) como \nINPUT\n.\nEm seguida, o \nloop\n do Arduino l\u00ea o estado do bot\u00e3o continuamente e o repassa\nao LED:\n\n\nvoid setup() {                \n    pinMode(13, OUTPUT);     \n    pinMode( 2, INPUT);     \n}\n\nvoid loop() {\n    int v = digitalRead(2);\n    digitalWrite(13, v);\n}\n\n\n\n\nLinks\n\n\n\n\nWikipedia:   \nhttps://pt.wikipedia.org/wiki/Bot%C3%A3o_de_press%C3%A3o\n\n\nArduino.cc:  \nhttps://www.arduino.cc/en/Tutorial/Button\n\n\nCircuits.io: \nhttps://circuits.io/circuits/3568686-botao-de-pressao\n\n\nLED", 
             "title": "Bot\u00e3o de Press\u00e3o"
         }, 
         {
             "location": "/componentes/entrada/botao-de-pressao/#botao-de-pressao", 
-            "text": "Um bot\u00e3o de press\u00e3o \u00e9 similar a um interruptor de parede e \u00e9 usado para fechar\nou abrir um circuito el\u00e9ctrico.\nTipicamente, um  bot\u00e3o de press\u00e3o inclui um mecanismo que o retorna ao estado\nde repouso quando a for\u00e7a de atua\u00e7\u00e3o n\u00e3o \u00e9 mais aplicada.\nEm seu estado de repouso, um bot\u00e3o pode ter os seus contatos abertos (i.e., NO: normally open ) ou fechados (i.e.,  NC: normally closed ).  No Arduino, um dos lados do bot\u00e3o de press\u00e3o deve ser conectado ao  5V  e o\noutro ao  GND .\nAl\u00e9m disso, um dos lados deve ser contectado a um pino digital de  INPUT ,\nfornecendo o estado do bot\u00e3o ao Arduino.  Caso o circuito do bot\u00e3o tenha sido montado como  NO , a leitura do pino ser\u00e1 LOW  no estado de repouso e  HIGH  no estado pressionado.\nCaso o circuito do bot\u00e3o tenha sido montado como  NC , a leitura do pino ser\u00e1 HIGH  no estado de repouso e  LOW  no estado pressionado.", 
+            "text": "O bot\u00e3o de press\u00e3o \u00e9 similar a um interruptor de parede e \u00e9 usado para fechar\nou abrir um circuito el\u00e9ctrico.\nTipicamente, o bot\u00e3o de press\u00e3o inclui um mecanismo que o retorna ao estado\nde repouso quando a for\u00e7a de atua\u00e7\u00e3o n\u00e3o \u00e9 mais aplicada.\nEm seu estado de repouso, o bot\u00e3o pode ter os seus contatos abertos (i.e., NO: normally open ) ou fechados (i.e.,  NC: normally closed ).  No Arduino, um dos lados do bot\u00e3o de press\u00e3o deve ser conectado ao  5V  (fonte)\ne o outro ao  GND  (terra).\nAl\u00e9m disso, um dos lados deve ser contectado a um pino digital de  INPUT ,\nfornecendo o estado do bot\u00e3o ao Arduino.\nOs lados devem ser separados por um resistor para controlar a corrente.  Caso o circuito do bot\u00e3o tenha sido montado como  NO , a leitura do pino ser\u00e1 LOW  no estado de repouso e  HIGH  no estado pressionado.\nCaso o circuito do bot\u00e3o tenha sido montado como  NC , a leitura do pino ser\u00e1 HIGH  no estado de repouso e  LOW  no estado pressionado.", 
             "title": "Bot\u00e3o de Press\u00e3o"
         }, 
         {
             "location": "/componentes/entrada/botao-de-pressao/#exemplo", 
-            "text": "No exemplo a seguir, o bot\u00e3o \u00e9 montado como  NO , uma vez que a porta de\nleitura \u00e9 ligada .  No circuito a seguir, o bot\u00e3o est\u00e1 ligado como  NO , uma vez que a leitura  void setup() {                \n  pinMode(13, OUTPUT);     \n  pinMode( 2, INPUT);     \n}\n\nvoid loop() {\n  int v = digitalRead(2);\n  digitalWrite(13, v);\n}", 
+            "text": "O exemplo a seguir faz com que o LED embutido na placa do Arduino acompanhe o\nestado do bot\u00e3o, ou seja, fique ligado caso o bot\u00e3o esteja pressionado e\ndesligado caso contr\u00e1rio.  O circuito usa um bot\u00e3o  NO  ligado ao pino  2 :   O c\u00f3digo configura o pino  13  (ligado ao LED da placa) como  OUTPUT  e o pino 2  (ligado ao bot\u00e3o) como  INPUT .\nEm seguida, o  loop  do Arduino l\u00ea o estado do bot\u00e3o continuamente e o repassa\nao LED:  void setup() {                \n    pinMode(13, OUTPUT);     \n    pinMode( 2, INPUT);     \n}\n\nvoid loop() {\n    int v = digitalRead(2);\n    digitalWrite(13, v);\n}", 
             "title": "Exemplo"
         }, 
         {
             "location": "/componentes/entrada/botao-de-pressao/#links", 
-            "text": "Wikipedia:    https://pt.wikipedia.org/wiki/Bot%C3%A3o_de_press%C3%A3o  Arduino.cc:   https://www.arduino.cc/en/Tutorial/Button  Circuits.io:  https://circuits.io/circuits/3568686-exercicio-1/  LED", 
+            "text": "Wikipedia:    https://pt.wikipedia.org/wiki/Bot%C3%A3o_de_press%C3%A3o  Arduino.cc:   https://www.arduino.cc/en/Tutorial/Button  Circuits.io:  https://circuits.io/circuits/3568686-botao-de-pressao  LED", 
             "title": "Links"
         }, 
         {
+            "location": "/componentes/saida/", 
+            "text": "Sa\u00edda\n\n\nTODO", 
+            "title": "Sa\u00edda"
+        }, 
+        {
+            "location": "/componentes/saida/#saida", 
+            "text": "TODO", 
+            "title": "Sa\u00edda"
+        }, 
+        {
             "location": "/componentes/saida/led/", 
-            "text": "LED\n\n\n\n\nUm bot\u00e3o de press\u00e3o \u00e9 similar a um interruptor de parede e \u00e9 usado para fechar\nou abrir um circuito el\u00e9ctrico.\nTipicamente, um  bot\u00e3o de press\u00e3o inclui um mecanismo que o retorna ao estado\nde repouso quando a for\u00e7a de atua\u00e7\u00e3o n\u00e3o \u00e9 mais aplicada.\nEm seu estado de repouso, um bot\u00e3o pode ter os seus contatos abertos (i.e.,\n\nNO: normally open\n) ou fechados (i.e., \nNC: normally closed\n).\n\n\nNo Arduino, um dos lados do bot\u00e3o de press\u00e3o deve ser conectado ao \n5V\n e o\noutro ao \nGND\n.\nAl\u00e9m disso, um dos lados deve ser contectado a um pino digital de \nINPUT\n,\nfornecendo o estado do bot\u00e3o ao Arduino.\n\n\nCaso o circuito do bot\u00e3o tenha sido montado como \nNO\n, a leitura do pino ser\u00e1\n\nLOW\n no estado de repouso e \nHIGH\n no estado pressionado.\nCaso o circuito do bot\u00e3o tenha sido montado como \nNC\n, a leitura do pino ser\u00e1\n\nHIGH\n no estado de repouso e \nLOW\n no estado pressionado.\n\n\nExemplo\n\n\nNo exemplo a seguir, o bot\u00e3o \u00e9 montado como \nNO\n, uma vez que a porta de\nleitura \u00e9 ligada .\n\n\nNo circuito a seguir, o bot\u00e3o est\u00e1 ligado como \nNO\n, uma vez que a leitura\n\n\n\nvoid setup() {                \n  pinMode(13, OUTPUT);     \n  pinMode( 2, INPUT);     \n}\n\nvoid loop() {\n  int v = digitalRead(2);\n  digitalWrite(13, v);\n}\n\n\n\n\nLinks\n\n\n\n\nWikipedia:   \nhttps://pt.wikipedia.org/wiki/Diodo_emissor_de_luz\n\n\nArduino.cc:  \nhttps://www.arduino.cc/en/Tutorial/Button\n\n\nCircuits.io: \nhttps://circuits.io/circuits/3568686-botao-de-pressao", 
+            "text": "LED\n\n\n\n\nO diodo emissor de luz, tamb\u00e9m conhecido pela sigla em ingl\u00eas\n\nLED (Light Emitting Diode)\n, \u00e9 usado para a emiss\u00e3o de luz em locais e\ninstrumentos onde se torna mais conveniente a sua utiliza\u00e7\u00e3o no lugar de uma\nl\u00e2mpada.\nEspecialmente utilizado em produtos de microeletr\u00f4nica como sinalizador de\navisos, tamb\u00e9m pode ser encontrado em tamanho maior, como em alguns modelos de\nsem\u00e1foros.\nTamb\u00e9m \u00e9 muito utilizado em pain\u00e9is de LED, cortinas de LED, pistas de LED e\npostes de ilumina\u00e7\u00e3o p\u00fablica, permitindo uma redu\u00e7\u00e3o significativa no consumo\nde eletricidade.\n\n\nNo Arduino, o lado mais comprido do LED (\nanodo\n) deve ser conectado a um pino\ndigital de \nOUTPUT\n (fonte), enquanto que o lado mais curto (\ncatodo\n) deve ser\nconectado ao \nGND\n (terra).\nOs lados devem ser separados por um resistor para controlar a corrente.\n\n\nExemplo\n\n\nO exemplo a seguir pisca um LED a cada 500 milisegundos.\n\n\nNo circuito, o LED est\u00e1 ligado ao pino \n13\n:\n\n\n\n\nO c\u00f3digo configura o pino \n13\n como \nOUTPUT\n.\nEm seguida, o \nloop\n do Arduino alterna entre ligar e desligar o LED a cada\n500 milisegundos:\n\n\nvoid setup() {                \n    pinMode(13, OUTPUT);     \n}\n\nvoid loop() {\n    delay(500);\n    digitalWrite(13, HIGH);\n    delay(500);\n    digitalWrite(13, LOW);\n}\n\n\n\n\nLinks\n\n\n\n\nWikipedia:   \nhttps://pt.wikipedia.org/wiki/Diodo_emissor_de_luz\n\n\nArduino.cc:  \nhttps://www.arduino.cc/en/tutorial/blink\n\n\nCircuits.io: \nhttps://circuits.io/circuits/3572951-led", 
             "title": "LED"
         }, 
         {
             "location": "/componentes/saida/led/#led", 
-            "text": "Um bot\u00e3o de press\u00e3o \u00e9 similar a um interruptor de parede e \u00e9 usado para fechar\nou abrir um circuito el\u00e9ctrico.\nTipicamente, um  bot\u00e3o de press\u00e3o inclui um mecanismo que o retorna ao estado\nde repouso quando a for\u00e7a de atua\u00e7\u00e3o n\u00e3o \u00e9 mais aplicada.\nEm seu estado de repouso, um bot\u00e3o pode ter os seus contatos abertos (i.e., NO: normally open ) ou fechados (i.e.,  NC: normally closed ).  No Arduino, um dos lados do bot\u00e3o de press\u00e3o deve ser conectado ao  5V  e o\noutro ao  GND .\nAl\u00e9m disso, um dos lados deve ser contectado a um pino digital de  INPUT ,\nfornecendo o estado do bot\u00e3o ao Arduino.  Caso o circuito do bot\u00e3o tenha sido montado como  NO , a leitura do pino ser\u00e1 LOW  no estado de repouso e  HIGH  no estado pressionado.\nCaso o circuito do bot\u00e3o tenha sido montado como  NC , a leitura do pino ser\u00e1 HIGH  no estado de repouso e  LOW  no estado pressionado.", 
+            "text": "O diodo emissor de luz, tamb\u00e9m conhecido pela sigla em ingl\u00eas LED (Light Emitting Diode) , \u00e9 usado para a emiss\u00e3o de luz em locais e\ninstrumentos onde se torna mais conveniente a sua utiliza\u00e7\u00e3o no lugar de uma\nl\u00e2mpada.\nEspecialmente utilizado em produtos de microeletr\u00f4nica como sinalizador de\navisos, tamb\u00e9m pode ser encontrado em tamanho maior, como em alguns modelos de\nsem\u00e1foros.\nTamb\u00e9m \u00e9 muito utilizado em pain\u00e9is de LED, cortinas de LED, pistas de LED e\npostes de ilumina\u00e7\u00e3o p\u00fablica, permitindo uma redu\u00e7\u00e3o significativa no consumo\nde eletricidade.  No Arduino, o lado mais comprido do LED ( anodo ) deve ser conectado a um pino\ndigital de  OUTPUT  (fonte), enquanto que o lado mais curto ( catodo ) deve ser\nconectado ao  GND  (terra).\nOs lados devem ser separados por um resistor para controlar a corrente.", 
             "title": "LED"
         }, 
         {
             "location": "/componentes/saida/led/#exemplo", 
-            "text": "No exemplo a seguir, o bot\u00e3o \u00e9 montado como  NO , uma vez que a porta de\nleitura \u00e9 ligada .  No circuito a seguir, o bot\u00e3o est\u00e1 ligado como  NO , uma vez que a leitura  void setup() {                \n  pinMode(13, OUTPUT);     \n  pinMode( 2, INPUT);     \n}\n\nvoid loop() {\n  int v = digitalRead(2);\n  digitalWrite(13, v);\n}", 
+            "text": "O exemplo a seguir pisca um LED a cada 500 milisegundos.  No circuito, o LED est\u00e1 ligado ao pino  13 :   O c\u00f3digo configura o pino  13  como  OUTPUT .\nEm seguida, o  loop  do Arduino alterna entre ligar e desligar o LED a cada\n500 milisegundos:  void setup() {                \n    pinMode(13, OUTPUT);     \n}\n\nvoid loop() {\n    delay(500);\n    digitalWrite(13, HIGH);\n    delay(500);\n    digitalWrite(13, LOW);\n}", 
             "title": "Exemplo"
         }, 
         {
             "location": "/componentes/saida/led/#links", 
-            "text": "Wikipedia:    https://pt.wikipedia.org/wiki/Diodo_emissor_de_luz  Arduino.cc:   https://www.arduino.cc/en/Tutorial/Button  Circuits.io:  https://circuits.io/circuits/3568686-botao-de-pressao", 
+            "text": "Wikipedia:    https://pt.wikipedia.org/wiki/Diodo_emissor_de_luz  Arduino.cc:   https://www.arduino.cc/en/tutorial/blink  Circuits.io:  https://circuits.io/circuits/3572951-led", 
             "title": "Links"
         }
     ]

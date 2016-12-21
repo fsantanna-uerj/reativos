@@ -67,8 +67,22 @@
 
         
             
+    <li class="toctree-l1 ">
+        <a class="" href="../../">Componentes</a>
+        
+    </li>
+
+        
+            
     <ul class="subnav">
     <li><span>Entrada</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../entrada/">Entrada</a>
+        
+    </li>
 
         
             
@@ -84,6 +98,13 @@
             
     <ul class="subnav">
     <li><span>Saída</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Saída</a>
+        
+    </li>
 
         
             
@@ -150,43 +171,46 @@
           <div role="main">
             <div class="section">
               
-                <h4 id="led">LED</h4>
+                <h3 id="led">LED</h3>
 <p><img src="../imagens/led-01.jpg" align="right" width="200"></p>
-<p>Um botão de pressão é similar a um interruptor de parede e é usado para fechar
-ou abrir um circuito eléctrico.
-Tipicamente, um  botão de pressão inclui um mecanismo que o retorna ao estado
-de repouso quando a força de atuação não é mais aplicada.
-Em seu estado de repouso, um botão pode ter os seus contatos abertos (i.e.,
-<em>NO: normally open</em>) ou fechados (i.e., <em>NC: normally closed</em>).</p>
-<p>No Arduino, um dos lados do botão de pressão deve ser conectado ao <code>5V</code> e o
-outro ao <code>GND</code>.
-Além disso, um dos lados deve ser contectado a um pino digital de <code>INPUT</code>,
-fornecendo o estado do botão ao Arduino.</p>
-<p>Caso o circuito do botão tenha sido montado como <em>NO</em>, a leitura do pino será
-<code>LOW</code> no estado de repouso e <code>HIGH</code> no estado pressionado.
-Caso o circuito do botão tenha sido montado como <em>NC</em>, a leitura do pino será
-<code>HIGH</code> no estado de repouso e <code>LOW</code> no estado pressionado.</p>
-<h5 id="exemplo">Exemplo</h5>
-<p>No exemplo a seguir, o botão é montado como <em>NO</em>, uma vez que a porta de
-leitura é ligada .</p>
-<p>No circuito a seguir, o botão está ligado como <em>NO</em>, uma vez que a leitura
-<img src="../imagens/botao-02.png" width="400"></p>
+<p>O diodo emissor de luz, também conhecido pela sigla em inglês
+<em>LED (Light Emitting Diode)</em>, é usado para a emissão de luz em locais e
+instrumentos onde se torna mais conveniente a sua utilização no lugar de uma
+lâmpada.
+Especialmente utilizado em produtos de microeletrônica como sinalizador de
+avisos, também pode ser encontrado em tamanho maior, como em alguns modelos de
+semáforos.
+Também é muito utilizado em painéis de LED, cortinas de LED, pistas de LED e
+postes de iluminação pública, permitindo uma redução significativa no consumo
+de eletricidade.</p>
+<p>No Arduino, o lado mais comprido do LED (<em>anodo</em>) deve ser conectado a um pino
+digital de <code>OUTPUT</code> (fonte), enquanto que o lado mais curto (<em>catodo</em>) deve ser
+conectado ao <code>GND</code> (terra).
+Os lados devem ser separados por um resistor para controlar a corrente.</p>
+<h4 id="exemplo">Exemplo</h4>
+<p>O exemplo a seguir pisca um LED a cada 500 milisegundos.</p>
+<p>No circuito, o LED está ligado ao pino <code>13</code>:</p>
+<p><img src="../imagens/led-02.png" width="400"></p>
+<p>O código configura o pino <code>13</code> como <code>OUTPUT</code>.
+Em seguida, o <code>loop</code> do Arduino alterna entre ligar e desligar o LED a cada
+500 milisegundos:</p>
 <pre><code>void setup() {                
-  pinMode(13, OUTPUT);     
-  pinMode( 2, INPUT);     
+    pinMode(13, OUTPUT);     
 }
 
 void loop() {
-  int v = digitalRead(2);
-  digitalWrite(13, v);
+    delay(500);
+    digitalWrite(13, HIGH);
+    delay(500);
+    digitalWrite(13, LOW);
 }
 </code></pre>
 
-<h5 id="links">Links</h5>
+<h4 id="links">Links</h4>
 <ul>
 <li>Wikipedia:   <a href="https://pt.wikipedia.org/wiki/Diodo_emissor_de_luz">https://pt.wikipedia.org/wiki/Diodo_emissor_de_luz</a></li>
-<li>Arduino.cc:  <a href="https://www.arduino.cc/en/Tutorial/Button">https://www.arduino.cc/en/Tutorial/Button</a></li>
-<li>Circuits.io: <a href="https://circuits.io/circuits/3568686-botao-de-pressao">https://circuits.io/circuits/3568686-botao-de-pressao</a></li>
+<li>Arduino.cc:  <a href="https://www.arduino.cc/en/tutorial/blink">https://www.arduino.cc/en/tutorial/blink</a></li>
+<li>Circuits.io: <a href="https://circuits.io/circuits/3572951-led">https://circuits.io/circuits/3572951-led</a></li>
 </ul>
               
             </div>
@@ -196,7 +220,7 @@ void loop() {
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../../entrada/botao-de-pressao/" class="btn btn-neutral" title="Botão de Pressão"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../" class="btn btn-neutral" title="Saída"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -222,7 +246,7 @@ void loop() {
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../entrada/botao-de-pressao/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
     </span>
