@@ -1,7 +1,5 @@
-# Arduino
-
-- [Componentes](componentes/)
-    - [Entrada](componentes/entrada/)
+- Componentes
+    - Entrada
         - [Botão de Pressão](componentes/entrada/botao-de-pressao.md)
-    - [Saída](componentes/saida/)
+    - Saída
         - [LED](componentes/saida/led.md)
