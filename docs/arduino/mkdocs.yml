@@ -1,0 +1,11 @@
+site_name: Arduino
+theme:     readthedocs
+#site_dir:  site/v0.20
+
+pages:
+- Home: 'index.md'
+- Componentes:
+    - Entrada:
+        - 'Botão de Pressão': 'componentes/entrada/botao-de-pressao.md'
+    - Saída:
+        - 'LED': 'componentes/saida/led.md'
