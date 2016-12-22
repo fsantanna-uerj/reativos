@@ -7,23 +7,13 @@
         }, 
         {
             "location": "/componentes/", 
-            "text": "Componentes\n\n\nTODO", 
+            "text": "Componentes\n\n\nExistem diversos componentes de entrada, sa\u00edda, e de comunica\u00e7\u00e3o para serem\nconectados ao Arduino.\n\n\nLinks:\n\n\n\n\nhttp://playground.arduino.cc/Main/Components", 
             "title": "Componentes"
         }, 
         {
             "location": "/componentes/#componentes", 
-            "text": "TODO", 
+            "text": "Existem diversos componentes de entrada, sa\u00edda, e de comunica\u00e7\u00e3o para serem\nconectados ao Arduino.  Links:   http://playground.arduino.cc/Main/Components", 
             "title": "Componentes"
-        }, 
-        {
-            "location": "/componentes/entrada/", 
-            "text": "Entrada\n\n\nTODO", 
-            "title": "Entrada"
-        }, 
-        {
-            "location": "/componentes/entrada/#entrada", 
-            "text": "TODO", 
-            "title": "Entrada"
         }, 
         {
             "location": "/componentes/entrada/botao-de-pressao/", 
@@ -46,23 +36,13 @@
             "title": "Links"
         }, 
         {
-            "location": "/componentes/saida/", 
-            "text": "Sa\u00edda\n\n\nTODO", 
-            "title": "Sa\u00edda"
-        }, 
-        {
-            "location": "/componentes/saida/#saida", 
-            "text": "TODO", 
-            "title": "Sa\u00edda"
-        }, 
-        {
             "location": "/componentes/saida/led/", 
-            "text": "LED\n\n\n\n\nO diodo emissor de luz, tamb\u00e9m conhecido pela sigla em ingl\u00eas\n\nLED (Light Emitting Diode)\n, \u00e9 usado para a emiss\u00e3o de luz em locais e\ninstrumentos onde se torna mais conveniente a sua utiliza\u00e7\u00e3o no lugar de uma\nl\u00e2mpada.\nEspecialmente utilizado em produtos de microeletr\u00f4nica como sinalizador de\navisos, tamb\u00e9m pode ser encontrado em tamanho maior, como em alguns modelos de\nsem\u00e1foros.\nTamb\u00e9m \u00e9 muito utilizado em pain\u00e9is de LED, cortinas de LED, pistas de LED e\npostes de ilumina\u00e7\u00e3o p\u00fablica, permitindo uma redu\u00e7\u00e3o significativa no consumo\nde eletricidade.\n\n\nNo Arduino, o lado mais comprido do LED (\nanodo\n) deve ser conectado a um pino\ndigital de \nOUTPUT\n (fonte), enquanto que o lado mais curto (\ncatodo\n) deve ser\nconectado ao \nGND\n (terra).\nOs lados devem ser separados por um resistor para controlar a corrente.\n\n\nExemplo\n\n\nO exemplo a seguir pisca um LED a cada 500 milisegundos.\n\n\nNo circuito, o LED est\u00e1 ligado ao pino \n13\n:\n\n\n\n\nO c\u00f3digo configura o pino \n13\n como \nOUTPUT\n.\nEm seguida, o \nloop\n do Arduino alterna entre ligar e desligar o LED a cada\n500 milisegundos:\n\n\nvoid setup() {                \n    pinMode(13, OUTPUT);     \n}\n\nvoid loop() {\n    delay(500);\n    digitalWrite(13, HIGH);\n    delay(500);\n    digitalWrite(13, LOW);\n}\n\n\n\n\nLinks\n\n\n\n\nWikipedia:   \nhttps://pt.wikipedia.org/wiki/Diodo_emissor_de_luz\n\n\nArduino.cc:  \nhttps://www.arduino.cc/en/tutorial/blink\n\n\nCircuits.io: \nhttps://circuits.io/circuits/3572951-led", 
+            "text": "LED\n\n\n\n\nO diodo emissor de luz, tamb\u00e9m conhecido pela sigla em ingl\u00eas\n\nLED (Light Emitting Diode)\n, \u00e9 usado para a emiss\u00e3o de luz em locais e\ninstrumentos onde se torna mais conveniente a sua utiliza\u00e7\u00e3o no lugar de uma\nl\u00e2mpada.\nEspecialmente utilizado em produtos de microeletr\u00f4nica como sinalizador de\navisos, tamb\u00e9m pode ser encontrado em tamanho maior, como em alguns modelos de\nsem\u00e1foros.\nTamb\u00e9m \u00e9 muito utilizado em pain\u00e9is de LED, cortinas de LED, pistas de LED e\npostes de ilumina\u00e7\u00e3o p\u00fablica, permitindo uma redu\u00e7\u00e3o significativa no consumo\nde eletricidade.\n\n\nNo Arduino, o lado mais comprido do LED (\nanodo\n) deve ser conectado a um pino\ndigital de \nOUTPUT\n (fonte), enquanto que o lado mais curto (\ncatodo\n) deve ser\nconectado ao \nGND\n (terra).\nOs lados devem ser separados por um resistor para controlar a corrente.\n\n\nA placa do Arduino cont\u00e9m um LED embutido que est\u00e1 conectado ao pino \n13\n.\n\n\nExemplo\n\n\nO exemplo a seguir pisca um LED a cada 500 milisegundos.\n\n\nNo circuito, o LED est\u00e1 ligado ao pino \n13\n:\n\n\n\n\nO c\u00f3digo configura o pino \n13\n como \nOUTPUT\n.\nEm seguida, o \nloop\n do Arduino alterna entre ligar e desligar o LED a cada\n500 milisegundos:\n\n\nvoid setup() {                \n    pinMode(13, OUTPUT);     \n}\n\nvoid loop() {\n    delay(500);\n    digitalWrite(13, HIGH);\n    delay(500);\n    digitalWrite(13, LOW);\n}\n\n\n\n\nLinks\n\n\n\n\nWikipedia:   \nhttps://pt.wikipedia.org/wiki/Diodo_emissor_de_luz\n\n\nArduino.cc:  \nhttps://www.arduino.cc/en/tutorial/blink\n\n\nCircuits.io: \nhttps://circuits.io/circuits/3572951-led", 
             "title": "LED"
         }, 
         {
             "location": "/componentes/saida/led/#led", 
-            "text": "O diodo emissor de luz, tamb\u00e9m conhecido pela sigla em ingl\u00eas LED (Light Emitting Diode) , \u00e9 usado para a emiss\u00e3o de luz em locais e\ninstrumentos onde se torna mais conveniente a sua utiliza\u00e7\u00e3o no lugar de uma\nl\u00e2mpada.\nEspecialmente utilizado em produtos de microeletr\u00f4nica como sinalizador de\navisos, tamb\u00e9m pode ser encontrado em tamanho maior, como em alguns modelos de\nsem\u00e1foros.\nTamb\u00e9m \u00e9 muito utilizado em pain\u00e9is de LED, cortinas de LED, pistas de LED e\npostes de ilumina\u00e7\u00e3o p\u00fablica, permitindo uma redu\u00e7\u00e3o significativa no consumo\nde eletricidade.  No Arduino, o lado mais comprido do LED ( anodo ) deve ser conectado a um pino\ndigital de  OUTPUT  (fonte), enquanto que o lado mais curto ( catodo ) deve ser\nconectado ao  GND  (terra).\nOs lados devem ser separados por um resistor para controlar a corrente.", 
+            "text": "O diodo emissor de luz, tamb\u00e9m conhecido pela sigla em ingl\u00eas LED (Light Emitting Diode) , \u00e9 usado para a emiss\u00e3o de luz em locais e\ninstrumentos onde se torna mais conveniente a sua utiliza\u00e7\u00e3o no lugar de uma\nl\u00e2mpada.\nEspecialmente utilizado em produtos de microeletr\u00f4nica como sinalizador de\navisos, tamb\u00e9m pode ser encontrado em tamanho maior, como em alguns modelos de\nsem\u00e1foros.\nTamb\u00e9m \u00e9 muito utilizado em pain\u00e9is de LED, cortinas de LED, pistas de LED e\npostes de ilumina\u00e7\u00e3o p\u00fablica, permitindo uma redu\u00e7\u00e3o significativa no consumo\nde eletricidade.  No Arduino, o lado mais comprido do LED ( anodo ) deve ser conectado a um pino\ndigital de  OUTPUT  (fonte), enquanto que o lado mais curto ( catodo ) deve ser\nconectado ao  GND  (terra).\nOs lados devem ser separados por um resistor para controlar a corrente.  A placa do Arduino cont\u00e9m um LED embutido que est\u00e1 conectado ao pino  13 .", 
             "title": "LED"
         }, 
         {
@@ -73,6 +53,26 @@
         {
             "location": "/componentes/saida/led/#links", 
             "text": "Wikipedia:    https://pt.wikipedia.org/wiki/Diodo_emissor_de_luz  Arduino.cc:   https://www.arduino.cc/en/tutorial/blink  Circuits.io:  https://circuits.io/circuits/3572951-led", 
+            "title": "Links"
+        }, 
+        {
+            "location": "/componentes/comunicacao/serial/", 
+            "text": "Serial\n\n\nA interface serial oferece a comunica\u00e7\u00e3o \nbit-a-bit\n entre dois pontos.\n\n\n\n\n\n\nO Arduino possui uma interface serial embutida, permitindo que ele se comunique\ncom o computador (pela \nUSB\n) ou com outros dispositivos (pelos pinos \n0\n e\n\n1\n).\n\n\nA IDE do Arduino oferece o \nSerial Monitor\n (acessado atrav\u00e9s da lupa no topo \u00e0\ndireita), por onde \u00e9 poss\u00edvel ler e escrever para a interface serial.\nA IDE do \nCircuits.io\n tamb\u00e9m oferece funcionalidade equivalente.\n\n\nExemplo\n\n\nO exemplo a seguir l\u00ea os dados da serial e os escreve de volta a serial.\n\n\nO c\u00f3digo inicializa a serial com velocidade de 9600 bps.\nEm seguida, o \nloop\n do Arduino verifica continuamente se h\u00e1 dados a serem\nlidos da serial.\nEm caso afirmativo, o dado \u00e9 lido e copiado de volta para a serial:\n\n\nvoid setup() {\n    Serial.begin(9600);\n}\n\nvoid loop() {\n    if (Serial.available() \n 0) {\n        char c = Serial.read();\n        Serial.print(c);\n    }\n}\n\n\n\n\nLinks\n\n\n\n\nArduino.cc:  \nhttps://www.arduino.cc/en/Reference/Serial\n\n\nCircuits.io: \nhttps://circuits.io/circuits/3574623-serial\n\n\nOutros:      \nhttp://www.oxgadgets.com/2011/07/arduino-serial-communication.html", 
+            "title": "Serial"
+        }, 
+        {
+            "location": "/componentes/comunicacao/serial/#serial", 
+            "text": "A interface serial oferece a comunica\u00e7\u00e3o  bit-a-bit  entre dois pontos.    O Arduino possui uma interface serial embutida, permitindo que ele se comunique\ncom o computador (pela  USB ) ou com outros dispositivos (pelos pinos  0  e 1 ).  A IDE do Arduino oferece o  Serial Monitor  (acessado atrav\u00e9s da lupa no topo \u00e0\ndireita), por onde \u00e9 poss\u00edvel ler e escrever para a interface serial.\nA IDE do  Circuits.io  tamb\u00e9m oferece funcionalidade equivalente.", 
+            "title": "Serial"
+        }, 
+        {
+            "location": "/componentes/comunicacao/serial/#exemplo", 
+            "text": "O exemplo a seguir l\u00ea os dados da serial e os escreve de volta a serial.  O c\u00f3digo inicializa a serial com velocidade de 9600 bps.\nEm seguida, o  loop  do Arduino verifica continuamente se h\u00e1 dados a serem\nlidos da serial.\nEm caso afirmativo, o dado \u00e9 lido e copiado de volta para a serial:  void setup() {\n    Serial.begin(9600);\n}\n\nvoid loop() {\n    if (Serial.available()   0) {\n        char c = Serial.read();\n        Serial.print(c);\n    }\n}", 
+            "title": "Exemplo"
+        }, 
+        {
+            "location": "/componentes/comunicacao/serial/#links", 
+            "text": "Arduino.cc:   https://www.arduino.cc/en/Reference/Serial  Circuits.io:  https://circuits.io/circuits/3574623-serial  Outros:       http://www.oxgadgets.com/2011/07/arduino-serial-communication.html", 
             "title": "Links"
         }
     ]

@@ -8,7 +8,7 @@
   
   
   
-  <title>LED - Arduino</title>
+  <title>Serial - Arduino</title>
   
 
   <link rel="shortcut icon" href="../../../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "LED";
-    var mkdocs_page_input_path = "componentes/saida/led.md";
-    var mkdocs_page_url = "/componentes/saida/led/";
+    var mkdocs_page_name = "Serial";
+    var mkdocs_page_input_path = "componentes/comunicacao/serial.md";
+    var mkdocs_page_url = "/componentes/comunicacao/serial/";
   </script>
   
   <script src="../../../js/jquery-2.1.1.min.js"></script>
@@ -94,19 +94,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">LED</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#led">LED</a></li>
-                
-                    <li><a class="toctree-l4" href="#exemplo">Exemplo</a></li>
-                
-                    <li><a class="toctree-l4" href="#links">Links</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../../saida/led/">LED</a>
         
     </li>
 
@@ -120,8 +109,19 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../comunicacao/serial/">Serial</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Serial</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#serial">Serial</a></li>
+                
+                    <li><a class="toctree-l4" href="#exemplo">Exemplo</a></li>
+                
+                    <li><a class="toctree-l4" href="#links">Links</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -158,11 +158,11 @@
         
       
         
-          <li>Saída &raquo;</li>
+          <li>Comunicação &raquo;</li>
         
       
     
-    <li>LED</li>
+    <li>Serial</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -172,47 +172,39 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="led">LED</h3>
-<p><img src="../imagens/led-01.jpg" align="right" width="200"></p>
-<p>O diodo emissor de luz, também conhecido pela sigla em inglês
-<em>LED (Light Emitting Diode)</em>, é usado para a emissão de luz em locais e
-instrumentos onde se torna mais conveniente a sua utilização no lugar de uma
-lâmpada.
-Especialmente utilizado em produtos de microeletrônica como sinalizador de
-avisos, também pode ser encontrado em tamanho maior, como em alguns modelos de
-semáforos.
-Também é muito utilizado em painéis de LED, cortinas de LED, pistas de LED e
-postes de iluminação pública, permitindo uma redução significativa no consumo
-de eletricidade.</p>
-<p>No Arduino, o lado mais comprido do LED (<em>anodo</em>) deve ser conectado a um pino
-digital de <code>OUTPUT</code> (fonte), enquanto que o lado mais curto (<em>catodo</em>) deve ser
-conectado ao <code>GND</code> (terra).
-Os lados devem ser separados por um resistor para controlar a corrente.</p>
-<p>A placa do Arduino contém um LED embutido que está conectado ao pino <code>13</code>.</p>
+                <h3 id="serial">Serial</h3>
+<p>A interface serial oferece a comunicação <em>bit-a-bit</em> entre dois pontos.</p>
+<p><img src="../imagens/monitor-01.png" align="right" width="450"></p>
+<p><img src="../imagens/monitor-02.png" align="right" width="450"></p>
+<p>O Arduino possui uma interface serial embutida, permitindo que ele se comunique
+com o computador (pela <em>USB</em>) ou com outros dispositivos (pelos pinos <code>0</code> e
+<code>1</code>).</p>
+<p>A IDE do Arduino oferece o <em>Serial Monitor</em> (acessado através da lupa no topo à
+direita), por onde é possível ler e escrever para a interface serial.
+A IDE do <em>Circuits.io</em> também oferece funcionalidade equivalente.</p>
 <h4 id="exemplo">Exemplo</h4>
-<p>O exemplo a seguir pisca um LED a cada 500 milisegundos.</p>
-<p>No circuito, o LED está ligado ao pino <code>13</code>:</p>
-<p><img src="../imagens/led-02.png" width="400"></p>
-<p>O código configura o pino <code>13</code> como <code>OUTPUT</code>.
-Em seguida, o <code>loop</code> do Arduino alterna entre ligar e desligar o LED a cada
-500 milisegundos:</p>
-<pre><code>void setup() {                
-    pinMode(13, OUTPUT);     
+<p>O exemplo a seguir lê os dados da serial e os escreve de volta a serial.</p>
+<p>O código inicializa a serial com velocidade de 9600 bps.
+Em seguida, o <code>loop</code> do Arduino verifica continuamente se há dados a serem
+lidos da serial.
+Em caso afirmativo, o dado é lido e copiado de volta para a serial:</p>
+<pre><code>void setup() {
+    Serial.begin(9600);
 }
 
 void loop() {
-    delay(500);
-    digitalWrite(13, HIGH);
-    delay(500);
-    digitalWrite(13, LOW);
+    if (Serial.available() &gt; 0) {
+        char c = Serial.read();
+        Serial.print(c);
+    }
 }
 </code></pre>
 
 <h4 id="links">Links</h4>
 <ul>
-<li>Wikipedia:   <a href="https://pt.wikipedia.org/wiki/Diodo_emissor_de_luz">https://pt.wikipedia.org/wiki/Diodo_emissor_de_luz</a></li>
-<li>Arduino.cc:  <a href="https://www.arduino.cc/en/tutorial/blink">https://www.arduino.cc/en/tutorial/blink</a></li>
-<li>Circuits.io: <a href="https://circuits.io/circuits/3572951-led">https://circuits.io/circuits/3572951-led</a></li>
+<li>Arduino.cc:  <a href="https://www.arduino.cc/en/Reference/Serial">https://www.arduino.cc/en/Reference/Serial</a></li>
+<li>Circuits.io: <a href="https://circuits.io/circuits/3574623-serial">https://circuits.io/circuits/3574623-serial</a></li>
+<li>Outros:      <a href="http://www.oxgadgets.com/2011/07/arduino-serial-communication.html">http://www.oxgadgets.com/2011/07/arduino-serial-communication.html</a></li>
 </ul>
               
             </div>
@@ -221,10 +213,8 @@ void loop() {
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../comunicacao/serial/" class="btn btn-neutral float-right" title="Serial">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../../entrada/botao-de-pressao/" class="btn btn-neutral" title="Botão de Pressão"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../saida/led/" class="btn btn-neutral" title="LED"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -250,10 +240,8 @@ void loop() {
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../entrada/botao-de-pressao/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../saida/led/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../../comunicacao/serial/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

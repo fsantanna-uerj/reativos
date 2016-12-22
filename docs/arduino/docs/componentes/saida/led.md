@@ -18,6 +18,8 @@ digital de `OUTPUT` (fonte), enquanto que o lado mais curto (*catodo*) deve ser
 conectado ao `GND` (terra).
 Os lados devem ser separados por um resistor para controlar a corrente.
 
+A placa do Arduino contém um LED embutido que está conectado ao pino `13`.
+
 #### Exemplo
 
 O exemplo a seguir pisca um LED a cada 500 milisegundos.
