@@ -1,4 +1,4 @@
-#include "xtea.c"
+#include "xtea.c.h"
 
 #define LED 13
 
