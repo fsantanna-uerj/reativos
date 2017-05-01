@@ -1,7 +1,7 @@
 #include "arduino/arduino.ceu"
 
-input  bool PIN_02;
-output bool PIN_13;
+input  int PIN_02;
+output int PIN_13;
  
 par/or do
     loop do
@@ -11,7 +11,7 @@ par/or do
         await 1s;
     end
 with
-    var bool on = await PIN_02 until on;
+    var int on = await PIN_02 until on==LOW;
 end
 
 emit PIN_13(HIGH);

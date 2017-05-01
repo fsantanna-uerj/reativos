@@ -1,8 +1,8 @@
 #include "arduino/arduino.ceu"
 
-input  bool PIN_02;
-input  bool PIN_03;
-output bool PIN_13;
+input  int PIN_02;
+input  int PIN_03;
+output int PIN_13;
 
 var int dt = 1000;
 par/or do
@@ -14,19 +14,20 @@ par/or do
     end
 with
     loop do
-        var bool on = await PIN_02
-                      until on and (dt > 200);
+        var int on = await PIN_02
+                     until on==HIGH and (dt > 200);
         dt = dt - 100;
         await 50ms;
     end
 with
     loop do
-        var bool on = await PIN_03
-                      until on;
+        var int on = await PIN_03
+                     until on==HIGH;
         dt = dt + 100;
         await 50ms;
     end
 with
+    await 1s;
     loop do
         par/or do
             par/and do

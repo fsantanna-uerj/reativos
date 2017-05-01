@@ -1,0 +1,9 @@
+#include "arduino/arduino.ceu"
+
+output int PIN_13;
+input  int PIN_02;
+
+loop do
+    var int v = await PIN_02;
+    emit PIN_13(v);
+end
