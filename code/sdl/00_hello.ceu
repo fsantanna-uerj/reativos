@@ -1,35 +1,33 @@
-#include "sdl.ceu"
+#include "sdl/sdl.ceu"
 
 /* INITIALIZATION */
 /* FINALIZATION */
 
-var _SDL_Window&? window;
-    finalize
-        window = &_SDL_CreateWindow("Hello World!",
-                    _SDL_WINDOWPOS_UNDEFINED,
-                    _SDL_WINDOWPOS_UNDEFINED,
-                    640, 480, _SDL_WINDOW_SHOWN);
-    with
-        _SDL_DestroyWindow(&&window!);
-    end
+var& _SDL_Window window =
+    &_SDL_CreateWindow("Hello World!",
+                       _SDL_WINDOWPOS_CENTERED, _SDL_WINDOWPOS_CENTERED,
+                       640, 480,
+                       _SDL_WINDOW_SHOWN)
+        finalize (window) with
+            _SDL_DestroyWindow(&&window);
+        end;
 
-var _SDL_Renderer&? renderer;
-    finalize
-        renderer = &_SDL_CreateRenderer(&&window!, -1, 0);
-    with
-        _SDL_DestroyRenderer(&&renderer!);
-    end
+var& _SDL_Renderer renderer =
+    &_SDL_CreateRenderer(&&window, -1, 0)
+        finalize (renderer) with
+            _SDL_DestroyRenderer(&&renderer);
+        end;
 
 /* EXECUTION */
 
-_SDL_SetRenderDrawColor(&&renderer!, 0xFF,0xFF,0xFF,0x00);
-_SDL_RenderFillRect(&&renderer!, null);
+_SDL_SetRenderDrawColor(&&renderer, 0xFF,0xFF,0xFF,0x00);
+_SDL_RenderFillRect(&&renderer, null);
 
-var _SDL_Rect r = _SDL_Rect(200,200, 50,50);
-_SDL_SetRenderDrawColor(&&renderer!, 0x00,0x00,0xFF,0x00);
-_SDL_RenderFillRect(&&renderer!, &&r);
+var SDL_Rect r = val SDL_Rect(200,200, 50,50);
+_SDL_SetRenderDrawColor(&&renderer, 0x00,0x00,0xFF,0x00);
+_SDL_RenderFillRect(&&renderer, (&&r as _SDL_Rect&&));
 
-_SDL_RenderPresent(&&renderer!);
+_SDL_RenderPresent(&&renderer);
 
 await 5s;
 

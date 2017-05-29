@@ -1,0 +1,51 @@
+#include "sdl/sdl.ceu"
+
+var&? SDL_Init sdl =
+    spawn SDL_Init("Exercicio 1", 640,480, SDL_Color(0xFF,0xFF,0xFF,0xFF));
+
+watching sdl do
+
+    code/await Rect (var SDL_Rect r, var int dt) -> FOREVER do
+        par do
+            par/or do
+                loop do
+                    var int i;
+                    loop i in [1 -> 100] do
+                        await (dt)ms;
+                        r.x = r.x + 1;
+                    end
+                    loop i in [1 -> 100] do
+                        await (dt)ms;
+                        r.y = r.y + 1;
+                    end
+                    loop i in [1 -> 100] do
+                        await (dt)ms;
+                        r.x = r.x - 1;
+                    end
+                    loop i in [1 -> 100] do
+                        await (dt)ms;
+                        r.y = r.y - 1;
+                    end
+                end
+            with
+                var _SDL_MouseButtonEvent&& but;
+                but = await SDL_MOUSEBUTTONDOWN
+                      until _SDL_Rect_vs_Mouse((&&r as _SDL_Rect&&), but) as bool;
+            end
+            await FOREVER;
+        with
+            every SDL_REDRAW do
+                _SDL_SetRenderDrawColor(&&outer.sdl!.ren, 0x00,0x00,0xFF,0x00);
+                _SDL_RenderFillRect(&&outer.sdl!.ren, (&&r as _SDL_Rect&&));
+            end
+        end
+    end
+
+    par do
+        await Rect(SDL_Rect(100,100,50,50), 20);
+    with
+        await Rect(SDL_Rect(200,300,50,50), 10);
+    end
+end
+
+escape 0;
