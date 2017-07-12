@@ -23,10 +23,12 @@ Orientada a Eventos, Callbacks e o Padrão *Observer*, Máquinas de Estado,
 Co-rotinas, Programação Reativa Funcional, Programação Reativa Estruturada,
 Jogos, Arduino, Redes de Sensores sem Fio, Projetos.
 
-Projetos Finais Antigos
------------------------
+Projetos Antigos
+----------------
 
 ### 2016.2
+
+#### Projetos Finais
 
 - Adrianno e Giancarlo
     - Descrição:
@@ -137,6 +139,88 @@ Projetos Finais Antigos
     - Repositório: [GitHub](https://github.com/BFreire07/reativos/tree/master/Projeto%20Final)
     - Vídeo: ?? <!--[YouTube](https://www.youtube.com/watch?v=rbUciOqEyw4)-->
 
+#### Mini Projetos com Aruino
+
+- Adrianno Sampaio, Giancarlo França, Yago Tomé
+    - Descrição:
+    O projeto consiste na criação de um carro de duas rodas com direção
+    automatizada com base em dados obtidos através de quatro sensores de
+    distância: um frontal, no centro; dois para visão periférica, a ~45° para
+    cada um dos lados; e um na parte traseira.
+    O carro seguirá em frente sempre que possível, utilizando os sensores de
+    visão periférica para auxiliar no julgamento do melhor sentido para
+    rotacionar caso seja detectado algum obstáculo.
+    Se ambos os sensores laterais sinalizarem uma colisão iminente ao mesmo
+    tempo (em um intervalo de X ms), o carro se movimentará em ré até que seja
+    possível rotacionar para um dos lados. Se o sensor de distância traseiro
+    detectar um obstáculo próximo durante o movimento em ré, o carro irá parar
+    e acionar uma buzina para sinalizar que está preso.
+    - Repositório: [GitHub](https://github.com/adrianno3259/reativos/blob/master/code/MiniArduino)
+    - Vídeo: [YouTube](https://www.youtube.com/watch?v=lmC8ijmA6iE)
+
+<!--
+- Anny Caroline Chagas, Leonardo Marinho, Vitória Rio
+    - Descrição:
+    Este projeto é sobre um pequeno radar de velocidade que utiliza sensores de
+    luz. De acordo com os dados recebidos por estes sensores, o Arduino calcula
+    a velocidade estimada do objeto e a exibe na tela.
+    O usuário pode definir através do teclado uma velocidade limite que, se
+    ultrapassada, fará com que a buzina soe. Tendo também um viés de educação
+    no trânsito, a buzina toca em três modos diferentes, de acordo com o quanto
+    a velocidade foi transgredida: de 1 a 20%, de 20% a 50% e acima de 50%.
+    Estas faixas de valores são as mesmas utilizadas pelo DETRAN.
+    Haverá também um botão que liga e desliga o radar. Um LED ficará aceso
+    quando o radar estiver funcionando e apagado caso contrário.
+    - Repositório:
+    - Vídeo:
+-->
+
+- Camila e Renato
+    - Descrição:
+    O sistema de controle de acesso consiste em uma trava eletrônica,
+    representada por um micro servo motor, que é destravada quando o usuário
+    digita a senha correta.
+    O sistema conta ainda com sinais sonoros e visuais que indicam ao usuário
+    se a senha digitada está correta ou não.
+    - Repositório: [GitHub](https://github.com/camila-cg/reativos/tree/master/MiniProjeto_Arduino)
+    - Vídeo: [YouTube](https://www.youtube.com/watch?v=Sof8esEVl5o)
+
+- Igor e Tiago
+    - Descrição:
+    O projeto consiste na utilização de um sensor de distância que medirá o
+    quão próximo um objeto se aproxima dele e a utilização de alguns LEDs.
+    Conforme algum objeto se aproxime do sensor, os LEDs irão piscar juntos com
+    a buzina que emitirá um som (apito) que passará a fazer barulho em
+    intervalos cada vez menores de acordo com a proximidade do objeto.
+    - Repositório: [GitHub](https://github.com/igortouguinho/reativos/tree/master/tarefas/mini-projeto)
+    - Vídeo: [GitHub](https://github.com/igortouguinho/reativos/tree/master/tarefas/mini-projeto)
+
+- José Matheus, Matheus Stutzel, Rodrigo Braga
+    - Descrição:
+    Programar uma versão do jogo Timberman do Android no arduino.
+    - Repositório: [GitHub](https://github.com/moghat/reativos/tree/master/Projeto/projeto%20mini%20arduino)
+    - Vídeo: [GoogleDrive](https://drive.google.com/file/d/0B1HVVfussc4FYVdoQXVvb1B2UjA/view)
+
+- Gustavo, Lucas, Luiz Henrique
+    - Descrição:
+    Nessa primeira etapa do projeto, faremos um controlador de acesso com leitor RFID.
+    - Repositório: [GitHub](https://github.com/lucascomp/reativos/tree/master/mini-arduino)
+    - Vídeo: [YouTube](https://www.youtube.com/watch?v=eyv2O1DpoO4)
+
+- Lucas e Rafael
+    - Descrição:
+    O projeto do relógio Multifuncional dispõe de diversas modalidades.
+    São eles: Relógio, Alarme, Timer e Cronômetro.
+    O Relógio mostra as horas.
+    O Alarme é para que dispare uma buzina quando o horário definido pelo
+    usuário coincide com a hora do Relógio.
+    O Timer é um tempo determinado pelo usuário que decresce até chegar a zero,
+    disparando uma buzina.
+    O Cronômetro é para medir o tempo que se passa.
+    Apesar de ser possível visualizar apenas um módulo de cada vez, vale
+    a pena frisar que os módulos podem funcionar simultaneamente.
+    - Repositório: [GitHub](https://github.com/LucasAmaralPIres/reativos)
+    - Vídeo: [YouTube](https://github.com/LucasAmaralPIres/reativos/tree/master/Mini-Arduino/Projeto/Mini-Arduino%20V%C3%ADdeos)
 
 ### Outros Períodos
 
