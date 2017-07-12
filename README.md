@@ -220,7 +220,7 @@ Projetos Antigos
     Apesar de ser possível visualizar apenas um módulo de cada vez, vale
     a pena frisar que os módulos podem funcionar simultaneamente.
     - Repositório: [GitHub](https://github.com/LucasAmaralPIres/reativos)
-    - Vídeo: [YouTube](https://github.com/LucasAmaralPIres/reativos/tree/master/Mini-Arduino/Projeto/Mini-Arduino%20V%C3%ADdeos)
+    - Vídeo: [GitHub](https://github.com/LucasAmaralPIres/reativos/tree/master/Mini-Arduino/Projeto/Mini-Arduino%20V%C3%ADdeos)
 
 ### Outros Períodos
 
