@@ -71,9 +71,11 @@ Projetos Antigos
     - Vídeo: [YouTube](https://www.youtube.com/watch?v=n7ZNI_0yXJI)
 
 - Matheus e Rodrigo
-    - Descrição: ??
+    - Descrição:
+    Fazer um jogo de labirinto no computador, que fosse controlado pelo arduino
+    e tivesse um elemento de interatividade com o ambiente.
     - Repositório: [GitHub](https://github.com/matheusstutzel/reativos/tree/master/tarefas/Projeto_Final)
-    - Vídeo: [??](??)
+    - Vídeo: [GoogleDrive](https://drive.google.com/file/d/0B1HVVfussc4FMnRBMzJ6RExKNkE/view)
 
 - Anny e Leonardo
     - Descrição:
@@ -83,7 +85,7 @@ Projetos Antigos
     teclado de membrana será usado, no Arduino, para simular um tapete de
     dança.
     - Repositório: [GitHub](https://github.com/AnnyCaroline/reativos/tree/master/tarefas/projeto-final)
-    - Vídeo: [??](??)
+    - Vídeo: [YouTube](https://youtu.be/ZIs9ndqaqQY)
 
 - Gustavo e Luiz Henrique
     - Descrição:
