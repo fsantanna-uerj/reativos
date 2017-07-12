@@ -70,6 +70,11 @@ Projetos Antigos
     - Repositório: [GitHub](https://github.com/camila-cg/reativos/tree/master/ProjetoFinal)
     - Vídeo: [YouTube](https://www.youtube.com/watch?v=n7ZNI_0yXJI)
 
+- Matheus e Rodrigo
+    - Descrição: ??
+    - Repositório: [GitHub](https://github.com/matheusstutzel/reativos/tree/master/tarefas/Projeto_Final)
+    - Vídeo: [??](??)
+
 - Anny e Leonardo
     - Descrição:
     Este projeto é um jogo baseado no Dance Dance Revolution, e é escrito em
@@ -92,11 +97,6 @@ Projetos Antigos
     Jogo Snake feito em Arduino (Gameduino) e controlado por Android.
     - Repositório: [GitHub](https://github.com/diegocbcastro07/reativos/tree/master/Projeto%20Final)
     - Vídeo: [YouTube](https://www.youtube.com/watch?v=EY720cZBS9U)
-
-- Matheus e Rodrigo
-    - Descrição: ??
-    - Repositório: [GitHub](https://github.com/matheusstutzel/reativos/tree/master/tarefas/Projeto_Final)
-    - Vídeo: [??](??)
 
 - Rodrigo
     - Descrição:
@@ -149,7 +149,7 @@ Projetos Antigos
     - Repositório: [GitHub](https://github.com/BFreire07/reativos/tree/master/Projeto%20Final)
     - Vídeo: ?? <!--[YouTube](https://www.youtube.com/watch?v=rbUciOqEyw4)-->
 
-#### Mini Projetos com Aruino
+#### Mini Projetos com Arduino
 
 - Adrianno Sampaio, Giancarlo França, Yago Tomé
     - Descrição:
@@ -232,7 +232,7 @@ Projetos Antigos
     - Repositório: [GitHub](https://github.com/LucasAmaralPIres/reativos)
     - Vídeo: [GitHub](https://github.com/LucasAmaralPIres/reativos/tree/master/Mini-Arduino/Projeto/Mini-Arduino%20V%C3%ADdeos)
 
-### Outros Períodos
+### Outros Períodos (PUC-Rio)
 
 - https://www.youtube.com/watch?v=0E0lpCe-Kes
 - https://youtu.be/LVPj2yIZhNo
