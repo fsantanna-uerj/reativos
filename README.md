@@ -58,7 +58,15 @@ Projetos Antigos
     - Vídeo: [YouTube](https://www.youtube.com/watch?v=Hbsrv0DB-GQ)
 
 - Camila e Renato
-    - Descrição: ??
+    - Descrição:
+    O Beach Raid é um jogo baseado em um famoso jogo de Atari dos anos 80, o
+    River Raid. O jogo consiste em uma nave com combustível e munição infinitos
+    que sobrevoa um deserto e precisa evitar ser atingida por seus inimigos
+    (tanque de guerra, torre de guerra e helicóptero), que podem matá-la com
+    tiros ou por colisão.  O objetivo do jogo é sobreviver o máximo de tempo
+    possível, havendo um record para cada nível de dificuldade (fácil, médio,
+    difícil). A nave pode ser controlada via teclado ou pelo controlador
+    Arduino. 
     - Repositório: [GitHub](https://github.com/camila-cg/reativos/tree/master/ProjetoFinal)
     - Vídeo: [YouTube](https://www.youtube.com/watch?v=n7ZNI_0yXJI)
 
@@ -80,10 +88,10 @@ Projetos Antigos
     - Vídeo: [YouTube](https://www.youtube.com/watch?v=iZgaKInIocU)
 
 - Daniel e Diego
-    - Descrição: ??
+    - Descrição:
     Jogo Snake feito em Arduino (Gameduino) e controlado por Android.
     - Repositório: [GitHub](https://github.com/diegocbcastro07/reativos/tree/master/Projeto%20Final)
-    - Vídeo: [??](??)
+    - Vídeo: [YouTube](https://www.youtube.com/watch?v=EY720cZBS9U)
 
 - Matheus e Rodrigo
     - Descrição: ??
@@ -128,7 +136,9 @@ Projetos Antigos
     - Vídeo: ??
 
 - Lucas e Yago
-    - Descrição: ??
+    - Descrição:
+    Criação de uma game engine construída com SDL e C. O jogo roda em uma
+    plataforma 2D, utilizando integrações sensoriais com o Arduino.
     - Repositório: [GitHub](https://github.com/yagotome/sonic-jump-arduino-sdl)
     - Vídeo: [YouTube](https://www.youtube.com/watch?v=hUVc6oqPt-0)
 
