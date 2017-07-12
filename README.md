@@ -53,7 +53,12 @@ Projetos Finais Antigos
     esteja na hora da aula dele e quando o professor dessa aula estiver
     dentro).
     - Repositório: [GitHub](https://github.com/LucasAmaralPIres/reativos/tree/master/Projeto%20Final)
-    - Vídeo: [YouTube](https://www.youtube.com/watch?v=Hbsrv0DB-GQ&t=66s)
+    - Vídeo: [YouTube](https://www.youtube.com/watch?v=Hbsrv0DB-GQ)
+
+- Camila e Renato
+    - Descrição: ??
+    - Repositório: [GitHub](https://github.com/camila-cg/reativos/tree/master/ProjetoFinal)
+    - Vídeo: [YouTube](https://www.youtube.com/watch?v=n7ZNI_0yXJI)
 
 - Anny e Leonardo
     - Descrição:
@@ -65,17 +70,18 @@ Projetos Finais Antigos
     - Repositório: [GitHub](https://github.com/AnnyCaroline/reativos/tree/master/tarefas/projeto-final)
     - Vídeo: [??](??)
 
-- Camila e Renato
-    - Descrição: ??
-    - Repositório: [GitHub](https://github.com/camila-cg/reativos/tree/master/ProjetoFinal)
-    - Vídeo: [YouTube](https://www.youtube.com/watch?v=n7ZNI_0yXJI)
-
 - Gustavo e Luiz Henrique
     - Descrição:
     A partir da leitura de cartões RFID no Arduino, usaremos o Unity3D para
     exibir os modelos 3D das imagens das cartas.
     - Repositório: [GitHub](https://github.com/LuizAndrade/Projeto-Final-Reativos/)
     - Vídeo: [YouTube](https://www.youtube.com/watch?v=iZgaKInIocU)
+
+- Daniel e Diego
+    - Descrição: ??
+    Jogo Snake feito em Arduino (Gameduino) e controlado por Android.
+    - Repositório: [GitHub](https://github.com/diegocbcastro07/reativos/tree/master/Projeto%20Final)
+    - Vídeo: [??](??)
 
 - Matheus e Rodrigo
     - Descrição: ??
@@ -90,6 +96,14 @@ Projetos Finais Antigos
     - Repositório: [GitHub](https://github.com/rasantana/reativos/tree/master/Projeto-final)
     - Vídeo: [OneDrive](https://onedrive.live.com/?authkey=!AOhBkrDuB7wQuO4&cid=0BA1A0ECC405F433&id=BA1A0ECC405F433!4424&parId=BA1A0ECC405F433!164&o=OneUp
 )
+
+- Antônio
+    - Descrição:
+    Criação de uma pequena game engine construída com SDL e C++.
+    O jogo desenvolvido será um platformer 2D, utilizando integrações
+    sensoriais com o Arduino.
+    - Repositório: [GitHub](https://github.com/schonmann/reativos/tree/master/ProjetoFinal)
+    - Vídeo: [YouTube](https://www.youtube.com/watch?v=xb1ja0I6Pl8)
 
 - Carlos e Vitória
     - Descrição: ??
@@ -106,24 +120,10 @@ Projetos Finais Antigos
     - Repositório: ??
     - Vídeo: ??
 
-- Daniel e Diego
-    - Descrição: ??
-    Jogo Snake feito em Arduino (Gameduino) e controlado por Android.
-    - Repositório: [GitHub](https://github.com/diegocbcastro07/reativos/tree/master/Projeto%20Final)
-    - Vídeo: [??](??)
-
 - Igor e Tiago
     - Descrição: ??
     - Repositório: [GitHub](https://github.com/igortouguinho/reativos/tree/master/tarefas/projetofinal)
     - Vídeo: ??
-
-- Antônio
-    - Descrição:
-    Criação de uma pequena game engine construída com SDL e C++.
-    O jogo desenvolvido será um platformer 2D, utilizando integrações
-    sensoriais com o Arduino.
-    - Repositório: [GitHub](https://github.com/schonmann/reativos/tree/master/ProjetoFinal)
-    - Vídeo: [YouTube](https://www.youtube.com/watch?v=xb1ja0I6Pl8)
 
 - Lucas e Yago
     - Descrição: ??
@@ -135,7 +135,7 @@ Projetos Finais Antigos
     Jogo em SDL que aguarda interação com o usuário através de mensagem
     codificada em código morse pelo arduino.
     - Repositório: [GitHub](https://github.com/BFreire07/reativos/tree/master/Projeto%20Final)
-    - Vídeo: [YouTube](https://www.youtube.com/watch?v=rbUciOqEyw4)
+    - Vídeo: ?? <!--[YouTube](https://www.youtube.com/watch?v=rbUciOqEyw4)-->
 
 
 ### Outros Períodos
