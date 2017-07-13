@@ -43,7 +43,7 @@ Projetos Antigos
     O jogador também será capaz de eliminar os inimigos atirando projéteis
     que irão na direção do cursor do mouse, ao clicar na tela.
     - Repositório: [GitHub](https://github.com/gVirtu/reativos/tree/master/code/Projeto-Final)
-    - Vídeo: [??](??)
+    - Vídeo: [YouTube](https://youtu.be/lajxHnxROjU)
 
 - Lucas e Rafael
     - Descrição:
