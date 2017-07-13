@@ -84,8 +84,8 @@ Projetos Antigos
     A parte gráfica e sonora será feita por meio de SDL, enquanto que um
     teclado de membrana será usado, no Arduino, para simular um tapete de
     dança.
-    - Repositório: [GitHub](https://github.com/AnnyCaroline/reativos/tree/master/tarefas/projeto-final)
-    - Vídeo: [YouTube](https://youtu.be/ZIs9ndqaqQY)
+    - Repositório: [GitHub](https://github.com/AnnyCaroline/reativos/blob/master/tarefas/projeto-final/PROJECT.md)
+    - Vídeo: [YouTube](https://www.youtube.com/watch?v=traHrfkfJ_c&list=PL-Vy8N4zUqm6epgmOByDoAEiEwYhebnui)
 
 - Gustavo e Luiz Henrique
     - Descrição:
@@ -118,14 +118,12 @@ Projetos Antigos
     - Vídeo: [YouTube](https://www.youtube.com/watch?v=xb1ja0I6Pl8)
 
 - Carlos e Vitória
-    - Descrição: ??
-    - Repositório: [??](??)
-    - Vídeo: [??](??)
-    <!--
-    - 
+    - Descrição:
+    O projeto será uma melhora do mini-sdl(Pegue o Pombo).
+    O jogo terá mais dinâmica e mecânica e a dificuldade será crescente.
+    Usaremos um Joystick Arduino 3 Eixos para criar um controlador do mini-sdl.
     - Repositório: [GitHub](https://github.com/carlinhoh/reativos/tree/master/Projeto-Final)
-    - Vídeo: [YouTube]()
-    -->
+    - Vídeo: [GitHub](https://github.com/carlinhoh/reativos/raw/master/Projeto-Final/team.mp4)
 
 - José
     - Descrição: ??
