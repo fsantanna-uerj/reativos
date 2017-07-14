@@ -48,12 +48,12 @@ Projetos Antigos
 - Lucas e Rafael
     - Descrição:
     O objetivo do projeto é de fornecer controle para a área do conjunto de
-    salas na 6023F, na UERJ (Universidade do Estado do Rio de Janeiro).
-    Tem como objetivo ter acesso mais fácil e acessível a todas as Pessoas,
-    enquanto ao mesmo tempo aplica alguns métodos de entrada de acordo com o
-    perfil da Pessoa (por exemplo, um aluno só poderá entrar na área caso
-    esteja na hora da aula dele e quando o professor dessa aula estiver
-    dentro).
+    salas na 6023-F, na UERJ (Universidade do Estado do Rio de Janeiro).
+    Tem como objetivo facilitar o acesso de todas as Pessoas as salas 6023-F.
+    Enquanto todos que estão presentes no Banco de Dados tem acesso a sala,
+    somente o Professor consegue adicionar ou remover Pessoas do Banco de
+    Dados, dando a essas permissão de entrada na sala ou removendo-as da lista
+    de acesso.
     - Repositório: [GitHub](https://github.com/LucasAmaralPIres/reativos/tree/master/Projeto%20Final)
     - Vídeo: [YouTube](https://www.youtube.com/watch?v=Hbsrv0DB-GQ)
 
@@ -126,9 +126,19 @@ Projetos Antigos
     - Vídeo: [GitHub](https://github.com/carlinhoh/reativos/raw/master/Projeto-Final/team.mp4)
 
 - José
-    - Descrição: ??
-    - Repositório: ??
-    - Vídeo: ??
+    - Descrição:
+    O projeto é um jogo de plataforma 2D no estilo survival, baseado em pontos.
+    O jogador deve matar os monstros que aparecem na tela e evitar que eles o
+    matem.
+    O jogador pode pular, andar, atirar (apenas parado), recarregar e trocar de
+    armas.
+    A pontuação sobe para cada monstro morto. Depois de mortos eles tem chances
+    de deixar cair munição.
+    Os monstros seguem o jogador apenas pelo eixo x e dão dano ao enconstá-lo.
+    Ao Receber dano o jogador é também empurrado para trás.
+    Cada tiro acertado paralisa os monstros por um tempo, use isso a seu favor!
+    - Repositório: [GitHub](https://github.com/moghat/reativos/tree/master/Projeto/projeto%20final)
+    - Vídeo: [YouTube](https://www.youtube.com/watch?v=lh999-sAWpE)
 
 - Igor e Tiago
     - Descrição: ??
