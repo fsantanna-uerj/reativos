@@ -4,8 +4,10 @@
 Sistemas Reativos
 =================
 
+<!--
 Apresentação
 ------------
+-->
 
 Sistemas reativos interagem continuamente e em tempo real com o ambiente sob os
 quais estão inseridos.
@@ -141,9 +143,16 @@ Projetos Antigos
     - Vídeo: [YouTube](https://www.youtube.com/watch?v=lh999-sAWpE)
 
 - Igor e Tiago
-    - Descrição: ??
+    - Descrição:
+    Projeto baseado no jogo “Frogger” em que foi utilizado o arduino como
+    controle para o jogo. O joystick realiza a movimentação enquanto um botão
+    se encarrega dos disparos do personagem.
+    O objetivo do jogo é atravessar três sequências de obstáculos sem ser
+    atingido por nenhum deles. O jogador tem direito a disparar sua arma três
+    vezes para auxiliar na travessia. Ao concluir o objetivo o próximo nível é
+    liberado.
     - Repositório: [GitHub](https://github.com/igortouguinho/reativos/tree/master/tarefas/projetofinal)
-    - Vídeo: ??
+    - Vídeo: [YouTube](https://youtu.be/Qs9gQZG1X1k)
 
 - Lucas e Yago
     - Descrição:
